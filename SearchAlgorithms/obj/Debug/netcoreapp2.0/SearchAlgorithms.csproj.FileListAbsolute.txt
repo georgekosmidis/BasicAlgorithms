@@ -1,0 +1,11 @@
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\bin\Debug\netcoreapp2.0\SearchAlgorithms.deps.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\bin\Debug\netcoreapp2.0\SearchAlgorithms.runtimeconfig.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\bin\Debug\netcoreapp2.0\SearchAlgorithms.runtimeconfig.dev.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\bin\Debug\netcoreapp2.0\SearchAlgorithms.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\bin\Debug\netcoreapp2.0\SearchAlgorithms.pdb
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.csprojResolveAssemblyReference.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.csproj.CoreCompileInputs.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.AssemblyInfoInputs.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.AssemblyInfo.cs
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms\obj\Debug\netcoreapp2.0\SearchAlgorithms.pdb

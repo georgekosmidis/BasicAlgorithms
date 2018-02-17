@@ -1,0 +1,16 @@
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.Tests.deps.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.Tests.runtimeconfig.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.Tests.runtimeconfig.dev.json
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.Tests.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.Tests.pdb
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\bin\Debug\netcoreapp2.0\SearchAlgorithms.pdb
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.csprojResolveAssemblyReference.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.csproj.CoreCompileInputs.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.AssemblyInfoInputs.cache
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.AssemblyInfo.cs
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.dll
+E:\George\Desktop\SortAlgorithms\ArraySorting\SearchAlgorithms.Tests\obj\Debug\netcoreapp2.0\SearchAlgorithms.Tests.pdb
