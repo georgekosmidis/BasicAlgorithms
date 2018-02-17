@@ -11,4 +11,5 @@ Tests and compares the cycles of the following algorithms:
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/results.png" width="600" />
 
 RED : Algorithm failed to find result
+
 BLUE: Result found
