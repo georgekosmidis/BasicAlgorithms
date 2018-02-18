@@ -42,6 +42,8 @@ namespace BasicAlgorithms.Arrays
                     return new BubbleSort();
                 case eArraySortAlgorithms.Heap:
                     return new HeapSort();
+                case eArraySortAlgorithms.Merge:
+                    return new MergeSort();
             }
 
             throw new NotImplementedException("Unknown algorithm '" + nameof(sortAlgorithm) + "'");

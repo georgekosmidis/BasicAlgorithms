@@ -49,7 +49,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
         //space O(n) because of recursion, could be modified to a loop for O(1) complexity
         private void Heapify(List<int> data, int length, int largest)
         {
-            counter++;
+            
             //assume largest and get left and right that should be smaller
             var new_largest = largest;
             var left = 2 * largest + 1;//left branch of heap tree
@@ -67,6 +67,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             // and recurse with the new largest
             if (new_largest != largest)
             {
+                counter++;
                 var tmp = data[largest];
                 data[largest] = data[new_largest];
                 data[new_largest] = tmp;
