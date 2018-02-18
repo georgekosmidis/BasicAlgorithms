@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Trees\Creation\" />
+    <Compile Remove="Trees\Creation\**" />
+    <EmbeddedResource Remove="Trees\Creation\**" />
+    <None Remove="Trees\Creation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Trees\" />
   </ItemGroup>
 
 </Project>

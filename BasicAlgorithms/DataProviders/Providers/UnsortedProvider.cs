@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BasicAlgorithms.DataProviders
+namespace BasicAlgorithms.DataProviders.Providers
 {
-    public class SortedProvider : ISearchData
+    public class UnsortedProvider : ISearchData
     {
         public int MinValue { get; private set; }
         public int MaxValue { get; private set; }
@@ -16,23 +16,20 @@ namespace BasicAlgorithms.DataProviders
         public List<int> Data { get; private set; }
 
         /// <summary>
-        /// Provides a list of sorted but not uniformely distributed data
+        /// Provides a list of random integers
         /// </summary>
         /// <param name="size">Size of the list</param>
-        public SortedProvider(int size)
+        public UnsortedProvider(int size)
         {
             Data = new List<int>();
+            var rnd = new Random(1);
             for (var i = 0; i < size; i++)
             {
-
-                if (i < size / 2)
-                    Data.Add(i);
-                else
-                    Data.Add(Int32.MaxValue - i);
+                Data.Add(rnd.Next(0, size * 10));
             }
 
-            MinValue = Data[0];
-            MaxValue = Data[size - 1];
+            MinValue = Data.Min();
+            MaxValue = Data.Max();
             AvgValue = Data.First(x => x > (MinValue + MaxValue) / 2);
             RandomValue = Data[new Random((int)DateTime.Now.Ticks).Next(0, Data.Count - 1)];
             NotFoundValue = Data.Max() + 1;

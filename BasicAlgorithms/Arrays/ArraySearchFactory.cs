@@ -2,11 +2,8 @@
 using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using BasicAlgorithms.DataProviders;
-using BasicAlgorithms.DataProviders.Interfaces;
 using BasicAlgorithms.DataProviders.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays
 {
@@ -20,7 +17,7 @@ namespace BasicAlgorithms.Arrays
         public SearchResults Estimate(eArraysSearchAlgorithms searchAlgorithm, eSearchDataProviders searchDataProvider)
         {
             var _search = GetSearch(searchAlgorithm);
-            var _searchData = GetSearchData(searchDataProvider);
+            var _searchData = new DataProvidersFactory(SampleSize).GetProvider(searchDataProvider);
 
             var searchResults = new SearchResults()
             {
@@ -51,21 +48,6 @@ namespace BasicAlgorithms.Arrays
             }
 
             throw new NotImplementedException("Unknown algorithm '" + nameof(searchAlgorithm) + "'");
-        }
-
-        private ISearchData GetSearchData(eSearchDataProviders searchData)
-        {
-            switch (searchData)
-            {
-                case eSearchDataProviders.SortedAndUniform:
-                    return new SortedAndUniformProvider(SampleSize);
-                case eSearchDataProviders.Sorted:
-                    return new SortedProvider(SampleSize);
-                case eSearchDataProviders.Unsorted:
-                    return new UnsortedProvider(SampleSize);
-            }
-
-            throw new NotImplementedException("Unknown data provider '" + nameof(searchData) + "'");
         }
     }
 }

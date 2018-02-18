@@ -3,6 +3,7 @@ using BasicAlgorithms.DataProviders;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BasicAlgorithms.DataProviders.Providers;
 
 namespace BasicAlgorithms.Tests.DataProviders
 {
