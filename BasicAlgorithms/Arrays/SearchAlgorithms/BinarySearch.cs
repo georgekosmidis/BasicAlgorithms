@@ -38,12 +38,11 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
                 middle = start + ((end - start) / 2);
             }
 
+            watch.Stop();
+            searchResult.Ticks = watch.ElapsedTicks;
+
             if (data[middle] == value)
-            {
-                watch.Stop();
                 searchResult.PositionFound = middle;
-                searchResult.Ticks = watch.ElapsedTicks;
-            }
 
             return searchResult;
         }

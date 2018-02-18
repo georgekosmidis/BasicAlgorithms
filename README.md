@@ -1,7 +1,7 @@
 Basic Algorithms Comparison in C#
 =================================
 
-Tests and compares the number of cycles the following algorithms need to perform their intented job
+Tests and compares the time the following algorithms need to perform their intended job
 
 Array Search
 ------------

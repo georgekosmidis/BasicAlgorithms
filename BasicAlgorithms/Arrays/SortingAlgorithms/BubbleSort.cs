@@ -18,6 +18,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
         {
             var results = new SortResults();
             var watch = System.Diagnostics.Stopwatch.StartNew();
+
             for (var i = 0; i < data.Count; i++)
             {
                 for (var j = 0; j < data.Count - 1; j++)
@@ -31,9 +32,11 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
                     }
                 }
             }
-            results.SortedData = data;
+
             watch.Stop();
             results.Ticks = watch.ElapsedMilliseconds;
+
+            results.SortedData = data;
             return results;
         }
     }

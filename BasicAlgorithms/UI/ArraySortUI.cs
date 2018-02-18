@@ -22,7 +22,7 @@ namespace BasicAlgorithms.UI
         {
             this.PrintLine();
 
-            this.PrintRow("Cycles need to sort " + _sortFactory.SampleSize + " integers");
+            this.PrintRow("Ticks needed to sort " + _sortFactory.SampleSize + " integers");
             this.PrintLine();
 
             this.PrintLine();
@@ -60,9 +60,9 @@ namespace BasicAlgorithms.UI
         {
 
             this.PrintRow(title,
-                u.Cycles.ToString("00000000"),
-                r.Cycles.ToString("00000000"),
-                s.Cycles.ToString("00000000")
+                u.Ticks.ToString("00000000"),
+                r.Ticks.ToString("00000000"),
+                s.Ticks.ToString("00000000")
             );
             this.PrintLine();
         }

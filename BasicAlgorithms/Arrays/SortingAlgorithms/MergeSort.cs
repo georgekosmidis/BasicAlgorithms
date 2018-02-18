@@ -22,10 +22,11 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 
             _Sort(data, 0, data.Count - 1);
 
-            results.SortedData = data;
             watch.Stop();
             results.Ticks = watch.ElapsedMilliseconds;
             results.Cycles = cyclesCount;
+
+            results.SortedData = data;
             return results;
         }
 

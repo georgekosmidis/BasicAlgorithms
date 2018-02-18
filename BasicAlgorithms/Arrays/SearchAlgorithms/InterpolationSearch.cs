@@ -43,11 +43,12 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
                     end = pos - 1;
             }
 
+            watch.Stop();
+            searchResult.Ticks = watch.ElapsedTicks;
+
             if (pos >= 0 && data[pos] == value)
             {
-                watch.Stop();
                 searchResult.PositionFound = pos;
-                searchResult.Ticks = watch.ElapsedTicks;
             }
 
             return searchResult;

@@ -36,7 +36,7 @@ namespace BasicAlgorithms
         {
             Console.Clear();
             new ArraySortUI(
-                new ArraySortFactory(1000),
+                new ArraySortFactory(10000),
                 90
             ).Print();
 
