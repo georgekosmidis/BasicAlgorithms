@@ -1,7 +1,7 @@
 Basic Algorithms Comparison
 =============================
 
-Tests and compares the cycles of the following algorithms:
+Tests and compares the number of cycles the following algorithms need to perform their intented job
 
 Array Search
 ------------
@@ -19,14 +19,14 @@ Array Sorting
 
 
 
-Results for Search Comparison
-----------------------------
+Comparison for Search Algorithms
+--------------------------------
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/search_results.png" width="600" />
 
 ![#0C1A6F](https://placehold.it/15/0C1A6F/000000?text=+) : Result Found
 
 ![#DD4654](https://placehold.it/15/DD4654/000000?text=+) : No Result Found
 
-Results for Sort Comparison
----------------------------
+Comparison for Sort Algorithms
+------------------------------
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/sort_results.png" width="600" />
