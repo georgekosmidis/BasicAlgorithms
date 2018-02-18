@@ -1,4 +1,4 @@
-﻿using BasicAlgorithms.Interfaces;
+﻿using BasicAlgorithms.DataProviders.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,6 @@ namespace BasicAlgorithms.DataProviders
 {
     public class SortedAndUniformProvider : ISearchData
     {
-        public string Name { get; } = "Sorted and Uniformely Distributed data";
         public int MinValue { get; private set; }
         public int MaxValue { get; private set; }
         public int AvgValue { get; private set; }
@@ -16,6 +15,10 @@ namespace BasicAlgorithms.DataProviders
         public int NotFoundValue { get; private set; }
         public List<int> Data { get; private set; }
 
+        /// <summary>
+        /// Provides a list of sorted and uniformly distributed integerss
+        /// </summary>
+        /// <param name="size">ize of the list</param>
         public SortedAndUniformProvider(int size)
         {
             Data = Enumerable.Range(1, size).ToList();

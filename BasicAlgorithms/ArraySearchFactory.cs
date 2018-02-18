@@ -1,7 +1,9 @@
 ﻿using BasicAlgorithms.ArraySearchAlgorithms;
+using BasicAlgorithms.ArraySearchAlgorithms.Interfaces;
+using BasicAlgorithms.ArraySearchAlgorithms.Models;
 using BasicAlgorithms.DataProviders;
-using BasicAlgorithms.Interfaces;
-using BasicAlgorithms.Models;
+using BasicAlgorithms.DataProviders.Interfaces;
+using BasicAlgorithms.DataProviders.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,9 +27,9 @@ namespace BasicAlgorithms
                 ArrayCount = _searchData.Data.Count
             };
 
-            searchResults.LeftValue = _search.Find(_searchData.Data, _searchData.MinValue);
-            searchResults.MiddleValue = _search.Find(_searchData.Data, _searchData.AvgValue);
-            searchResults.RightValue = _search.Find(_searchData.Data, _searchData.MaxValue);
+            searchResults.MinValue = _search.Find(_searchData.Data, _searchData.MinValue);
+            searchResults.AvgValue = _search.Find(_searchData.Data, _searchData.AvgValue);
+            searchResults.MaxValue = _search.Find(_searchData.Data, _searchData.MaxValue);
             searchResults.RandomValue = _search.Find(_searchData.Data, _searchData.RandomValue);
             searchResults.NotFoundValue = _search.Find(_searchData.Data, _searchData.NotFoundValue);
 

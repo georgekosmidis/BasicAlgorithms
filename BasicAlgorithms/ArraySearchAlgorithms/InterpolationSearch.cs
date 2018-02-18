@@ -1,5 +1,5 @@
-﻿using BasicAlgorithms.Interfaces;
-using BasicAlgorithms.Models;
+﻿using BasicAlgorithms.ArraySearchAlgorithms.Interfaces;
+using BasicAlgorithms.ArraySearchAlgorithms.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

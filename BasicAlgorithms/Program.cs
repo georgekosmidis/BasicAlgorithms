@@ -1,6 +1,7 @@
 ﻿using BasicAlgorithms.ArraySearchAlgorithms;
+using BasicAlgorithms.ArraySearchAlgorithms.Models;
 using BasicAlgorithms.DataProviders;
-using BasicAlgorithms.Models;
+using BasicAlgorithms.DataProviders.Models;
 using BasicAlgorithms.UI;
 using System;
 using System.Collections.Generic;
@@ -51,22 +52,22 @@ namespace BasicAlgorithms
         {
 
             grid.PrintRow("Min",
-                (l.LeftValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.LeftValue.Cycles.ToString("00000000"),
-                (j.LeftValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.LeftValue.Cycles.ToString("00000000"),
-                (b.LeftValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.LeftValue.Cycles.ToString("00000000"),
-                (i.LeftValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.LeftValue.Cycles.ToString("00000000")
+                (l.MinValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.MinValue.Cycles.ToString("00000000"),
+                (j.MinValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.MinValue.Cycles.ToString("00000000"),
+                (b.MinValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.MinValue.Cycles.ToString("00000000"),
+                (i.MinValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.MinValue.Cycles.ToString("00000000")
             );
             grid.PrintRow("Avg",
-                (l.MiddleValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.MiddleValue.Cycles.ToString("00000000"),
-                (j.MiddleValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.MiddleValue.Cycles.ToString("00000000"),
-                (b.MiddleValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.MiddleValue.Cycles.ToString("00000000"),
-                (i.MiddleValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.MiddleValue.Cycles.ToString("00000000")
+                (l.AvgValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.AvgValue.Cycles.ToString("00000000"),
+                (j.AvgValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.AvgValue.Cycles.ToString("00000000"),
+                (b.AvgValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.AvgValue.Cycles.ToString("00000000"),
+                (i.AvgValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.AvgValue.Cycles.ToString("00000000")
             );
             grid.PrintRow("Max",
-                (l.RightValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.RightValue.Cycles.ToString("00000000"),
-                (j.RightValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.RightValue.Cycles.ToString("00000000"),
-                (b.RightValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.RightValue.Cycles.ToString("00000000"),
-                (i.RightValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.RightValue.Cycles.ToString("00000000")
+                (l.MaxValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.MaxValue.Cycles.ToString("00000000"),
+                (j.MaxValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + j.MaxValue.Cycles.ToString("00000000"),
+                (b.MaxValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + b.MaxValue.Cycles.ToString("00000000"),
+                (i.MaxValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + i.MaxValue.Cycles.ToString("00000000")
             );
             grid.PrintRow("NotFound",
                 (l.NotFoundValue.PositionFound != null ? ConsoleColor.Blue : ConsoleColor.Red) + "|" + l.NotFoundValue.Cycles.ToString("00000000"),

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BasicAlgorithms.Interfaces
+namespace BasicAlgorithms.DataProviders.Interfaces
 {
     public interface ISearchData
     {
@@ -10,6 +10,5 @@ namespace BasicAlgorithms.Interfaces
         int MaxValue { get; }
         int NotFoundValue { get; }
         List<int> Data { get; }
-        string Name { get; }
     }
 }

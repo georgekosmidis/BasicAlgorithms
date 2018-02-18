@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BasicAlgorithms.ArraySearchAlgorithms;
 using System.Collections.Generic;
 
-namespace BasicAlgorithms.Tests
+namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
 {
     [TestClass]
     public class LinearSearchTests

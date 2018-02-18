@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.Models
+namespace BasicAlgorithms.ArraySearchAlgorithms.Models
 {
     public enum eArraySearchAlgorithms { Linear, Jump, Binary, Interpolation }
 }
