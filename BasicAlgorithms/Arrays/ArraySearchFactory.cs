@@ -8,14 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms
+namespace BasicAlgorithms.Arrays
 {
     public class ArraySearchFactory
     {
-        int _sample;
+        public int SampleSize { get; }
         public ArraySearchFactory(int sample)
         {
-            _sample = sample;
+            SampleSize = sample;
         }
         public SearchResults Estimate(eArraysSearchAlgorithms searchAlgorithm, eSearchDataProviders searchDataProvider)
         {
@@ -58,11 +58,11 @@ namespace BasicAlgorithms
             switch (searchData)
             {
                 case eSearchDataProviders.SortedAndUniform:
-                    return new SortedAndUniformProvider(_sample);
+                    return new SortedAndUniformProvider(SampleSize);
                 case eSearchDataProviders.Sorted:
-                    return new SortedProvider(_sample);
+                    return new SortedProvider(SampleSize);
                 case eSearchDataProviders.Unsorted:
-                    return new UnsortedProvider(_sample);
+                    return new UnsortedProvider(SampleSize);
             }
 
             throw new NotImplementedException("Unknown data provider '" + nameof(searchData) + "'");
