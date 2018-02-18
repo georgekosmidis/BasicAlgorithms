@@ -4,5 +4,5 @@ using System.Text;
 
 namespace BasicAlgorithms.Arrays.SortingAlgorithms.Models
 {
-    public enum eArraySortAlgorithms { Insertion, Selection, Bubble, Heap, Merge }
+    public enum eArraySortAlgorithms { Insertion, Selection, Bubble, Heap, Merge, Quick }
 }

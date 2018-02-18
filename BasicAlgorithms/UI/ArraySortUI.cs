@@ -54,6 +54,11 @@ namespace BasicAlgorithms.UI
                 _sortFactory.Estimate(eArraySortAlgorithms.Merge, eSearchDataProviders.ReverseSorted),
                 _sortFactory.Estimate(eArraySortAlgorithms.Merge, eSearchDataProviders.Sorted)
             );
+            PrintGrid("Quick",
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.Sorted)
+            );
         }
 
         private void PrintGrid(string title, SortResults u, SortResults r, SortResults s)

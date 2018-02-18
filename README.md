@@ -17,7 +17,7 @@ Array Sorting
 3. Bubble Sort
 4. Heap Sort
 5. Merge Sort
-
+6. Quick Sort
 
 Comparison for Search Algorithms
 --------------------------------
