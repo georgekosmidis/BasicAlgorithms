@@ -1,5 +1,5 @@
-Basic Algorithms Comparison
-=============================
+Basic Algorithms Comparison in C#
+=================================
 
 Tests and compares the number of cycles the following algorithms need to perform their intented job
 
