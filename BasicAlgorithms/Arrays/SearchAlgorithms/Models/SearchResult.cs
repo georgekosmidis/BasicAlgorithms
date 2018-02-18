@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.ArraySearchAlgorithms.Models
+namespace BasicAlgorithms.Arrays.SearchAlgorithms.Models
 {
     public class SearchResult
     {

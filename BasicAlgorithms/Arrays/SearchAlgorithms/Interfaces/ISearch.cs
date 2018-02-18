@@ -1,7 +1,7 @@
-﻿using BasicAlgorithms.ArraySearchAlgorithms.Models;
+﻿using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using System.Collections.Generic;
 
-namespace BasicAlgorithms.ArraySearchAlgorithms.Interfaces
+namespace BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces
 {
     public interface ISearch
     {

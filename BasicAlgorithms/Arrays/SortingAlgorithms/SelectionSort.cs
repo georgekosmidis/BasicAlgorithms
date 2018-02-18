@@ -1,10 +1,10 @@
-﻿using BasicAlgorithms.SortingAlgorithms.Interfaces;
-using BasicAlgorithms.SortingAlgorithms.Models;
+﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
+using BasicAlgorithmsArrays.SortingAlgorithms.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.SortingAlgorithms
+namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
     public class SelectionSort : ISort
     {
@@ -20,17 +20,17 @@ namespace BasicAlgorithms.SortingAlgorithms
             var watch = System.Diagnostics.Stopwatch.StartNew();
             for (var i = 0; i < data.Count - 1; i++)
             {
-                var min = i;
+                var max = i;
                 for (var j = i + 1; j < data.Count; j++)
                 {
                     results.Cycles++;
-                    if (data[j] < data[min])
-                        min = j;
+                    if (data[j] < data[max])
+                        max = j;
                 }
-                if (min != i)
+                if (max != i)
                 {
-                    var tmp = data[min];
-                    data[min] = data[i];
+                    var tmp = data[max];
+                    data[max] = data[i];
                     data[i] = tmp;
                 }
             }

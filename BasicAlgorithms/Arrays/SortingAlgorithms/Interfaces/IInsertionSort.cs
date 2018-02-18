@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BasicAlgorithms.SortingAlgorithms.Models;
+using BasicAlgorithmsArrays.SortingAlgorithms.Models;
 
-namespace BasicAlgorithms.SortingAlgorithms.Interfaces
+namespace BasicAlgorithmsArrays.SortingAlgorithms.Interfaces
 {
     public interface ISort
     {

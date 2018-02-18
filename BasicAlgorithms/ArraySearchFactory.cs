@@ -1,6 +1,6 @@
-﻿using BasicAlgorithms.ArraySearchAlgorithms;
-using BasicAlgorithms.ArraySearchAlgorithms.Interfaces;
-using BasicAlgorithms.ArraySearchAlgorithms.Models;
+﻿using BasicAlgorithms.Arrays.SearchAlgorithms;
+using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
+using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using BasicAlgorithms.DataProviders;
 using BasicAlgorithms.DataProviders.Interfaces;
 using BasicAlgorithms.DataProviders.Models;
@@ -17,7 +17,7 @@ namespace BasicAlgorithms
         {
             _sample = sample;
         }
-        public SearchResults Estimate(eArraySearchAlgorithms searchAlgorithm, eSearchDataProviders searchDataProvider)
+        public SearchResults Estimate(eArraysSearchAlgorithms searchAlgorithm, eSearchDataProviders searchDataProvider)
         {
             var _search = GetSearch(searchAlgorithm);
             var _searchData = GetSearchData(searchDataProvider);
@@ -36,17 +36,17 @@ namespace BasicAlgorithms
             return searchResults;
         }
 
-        private ISearch GetSearch(eArraySearchAlgorithms searchAlgorithm)
+        private ISearch GetSearch(eArraysSearchAlgorithms searchAlgorithm)
         {
             switch (searchAlgorithm)
             {
-                case eArraySearchAlgorithms.Linear:
+                case eArraysSearchAlgorithms.Linear:
                     return new LinearSearch();
-                case eArraySearchAlgorithms.Jump:
+                case eArraysSearchAlgorithms.Jump:
                     return new JumpSearch();
-                case eArraySearchAlgorithms.Binary:
+                case eArraysSearchAlgorithms.Binary:
                     return new BinarySearch();
-                case eArraySearchAlgorithms.Interpolation:
+                case eArraysSearchAlgorithms.Interpolation:
                     return new InterpolationSearch();
             }
 

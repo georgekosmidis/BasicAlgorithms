@@ -1,18 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using BasicAlgorithms.SortingAlgorithms;
+using BasicAlgorithmsArrays.SortingAlgorithms;
 
-namespace BasicAlgorithms.Tests
+namespace BasicAlgorithms.Tests.ArraysArrays.SortingAlgorithms
 {
     [TestClass]
-    public class SelectionSortTests
+    public class InsertionSortTests
     {
         [TestMethod]
-        public void SelectionSort_Sort()
+        public void InsertionSort_Sort()
         {
-            var search = new SelectionSort();
+            var search = new InsertionSort();
 
-            var list = new List<int>() { 4, 1, 3, 5, 2 };
+            var list = new List<int>() { 5, 1, 3, 2, 4 };
             var result = search.Sort(list);
             Assert.AreEqual(1, result.SortedData[0]);
             Assert.AreEqual(2, result.SortedData[1]);

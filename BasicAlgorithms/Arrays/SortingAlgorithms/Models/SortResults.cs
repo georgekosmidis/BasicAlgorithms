@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.SortingAlgorithms.Models
+namespace BasicAlgorithmsArrays.SortingAlgorithms.Models
 {
     public class SortResults
     {

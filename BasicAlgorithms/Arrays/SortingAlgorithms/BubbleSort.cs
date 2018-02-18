@@ -1,16 +1,16 @@
-﻿using BasicAlgorithms.SortingAlgorithms.Interfaces;
-using BasicAlgorithms.SortingAlgorithms.Models;
+﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
+using BasicAlgorithmsArrays.SortingAlgorithms.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.SortingAlgorithms
+namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
-    public class InsertionSort : ISort
+    public class BubbleSort : ISort
     {
 
         /// <summary>
-        /// Insertion Sort Algorithm [Time: O(n^2), Space: O(1)]
+        /// Bubble Sort Algorithm [Time: O(n^2), Space: O(1)]
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -18,16 +18,16 @@ namespace BasicAlgorithms.SortingAlgorithms
         {
             var results = new SortResults();
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            for (var i = 1; i < data.Count; i++)
+            for (var i = 0; i < data.Count; i++)
             {
-                for (var j = i; j > 0; j--)
+                for (var j = 0; j < data.Count - 1; j++)
                 {
                     results.Cycles++;
-                    if (data[j - 1] > data[j])
+                    if (data[j] > data[j + 1])
                     {
-                        var tmp = data[j - 1];
-                        data[j - 1] = data[j];
-                        data[j] = tmp;
+                        var tmp = data[j];
+                        data[j] = data[j + 1];
+                        data[j + 1] = tmp;
                     }
                 }
             }

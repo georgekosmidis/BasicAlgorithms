@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BasicAlgorithms.ArraySearchAlgorithms;
+using BasicAlgorithms.Arrays.SearchAlgorithms;
 using System.Collections.Generic;
 
-namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
+namespace BasicAlgorithms.Tests.Arrays.SearchAlgorithms
 {
     [TestClass]
     public class BinarySearchTests

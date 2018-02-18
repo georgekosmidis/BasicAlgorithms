@@ -1,16 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using BasicAlgorithms.SortingAlgorithms;
+using BasicAlgorithmsArrays.SortingAlgorithms;
 
-namespace BasicAlgorithms.Tests
+namespace BasicAlgorithms.Tests.ArraysArrays.SortingAlgorithms
 {
     [TestClass]
-    public class InsertionSortTests
+    public class HeapSortTests
     {
         [TestMethod]
-        public void InsertionSort_Sort()
+        public void HeapSort_Sort()
         {
-            var search = new InsertionSort();
+            var search = new HeapSort();
 
             var list = new List<int>() { 5, 1, 3, 2, 4 };
             var result = search.Sort(list);

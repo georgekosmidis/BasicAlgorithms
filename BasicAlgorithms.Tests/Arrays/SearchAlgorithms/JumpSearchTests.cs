@@ -1,16 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BasicAlgorithms.ArraySearchAlgorithms;
+using BasicAlgorithms.Arrays.SearchAlgorithms;
 using System.Collections.Generic;
 
-namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
+namespace BasicAlgorithms.Tests.Arrays.SearchAlgorithms
 {
     [TestClass]
-    public class InterpolationSearchTests
+    public class JumpSearchTests
     {
         [TestMethod]
-        public void InterpolationSearch_Find_FindFirst()
+        public void JumpSearch_Find_FindFirst()
         {
-            var search = new InterpolationSearch();
+            var search = new JumpSearch();
 
             var list = new List<int>() { 2, 4, 6 };
             var result = search.Find(list, 2);
@@ -18,9 +18,9 @@ namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
         }
 
         [TestMethod]
-        public void InterpolationSearch_Find_FindLast()
+        public void JumpSearch_Find_FindLast()
         {
-            var search = new InterpolationSearch();
+            var search = new JumpSearch();
 
             var list = new List<int>() { 2, 4, 6 };
             var result = search.Find(list, 6);
@@ -32,9 +32,9 @@ namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
         }
 
         [TestMethod]
-        public void InterpolationSearch_Find_FindMiddle()
+        public void JumpSearch_Find_FindMiddle()
         {
-            var search = new InterpolationSearch();
+            var search = new JumpSearch();
 
             var list = new List<int>() { 2, 4, 6 };
             var result = search.Find(list, 4);
@@ -46,9 +46,9 @@ namespace BasicAlgorithms.Tests.ArraySearchAlgorithms
         }
 
         [TestMethod]
-        public void InterpolationSearch_Find_NoFind()
+        public void JumpSearch_Find_NoFind()
         {
-            var search = new InterpolationSearch();
+            var search = new JumpSearch();
 
             var list = new List<int>() { 2, 4, 6 };
             var result = search.Find(list, 5);

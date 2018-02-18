@@ -1,5 +1,5 @@
-﻿using BasicAlgorithms.ArraySearchAlgorithms;
-using BasicAlgorithms.ArraySearchAlgorithms.Models;
+﻿using BasicAlgorithms.Arrays.SearchAlgorithms;
+using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using BasicAlgorithms.DataProviders;
 using BasicAlgorithms.DataProviders.Models;
 using BasicAlgorithms.UI;
@@ -21,28 +21,28 @@ namespace BasicAlgorithms
             grid.PrintRow("Sorted, uniform distribution array of " + sample + " integers");
             grid.PrintLine();
             PrintGrid(
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Linear, eSearchDataProviders.SortedAndUniform),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Jump, eSearchDataProviders.SortedAndUniform),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Binary, eSearchDataProviders.SortedAndUniform),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Interpolation, eSearchDataProviders.SortedAndUniform)
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.SortedAndUniform),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.SortedAndUniform),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.SortedAndUniform),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.SortedAndUniform)
             );
 
             grid.PrintRow("Sorted, not evenly distributed array of " + sample + " integers");
             grid.PrintLine();
             PrintGrid(
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Linear, eSearchDataProviders.Sorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Jump, eSearchDataProviders.Sorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Binary, eSearchDataProviders.Sorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Interpolation, eSearchDataProviders.Sorted)
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.Sorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.Sorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.Sorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.Sorted)
             );
 
             grid.PrintRow("Unsorted (random) array of " + sample + " integers");
             grid.PrintLine();
             PrintGrid(
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Linear, eSearchDataProviders.Unsorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Jump, eSearchDataProviders.Unsorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Binary, eSearchDataProviders.Unsorted),
-                new ArraySearchFactory(sample).Estimate(eArraySearchAlgorithms.Interpolation, eSearchDataProviders.Unsorted)
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.Unsorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.Unsorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.Unsorted),
+                new ArraySearchFactory(sample).Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.Unsorted)
             );
 
             Console.ReadKey();
