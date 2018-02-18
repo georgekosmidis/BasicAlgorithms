@@ -18,6 +18,7 @@ namespace BasicAlgorithms.UI
 
         public void Print()
         {
+            this.PrintLine();
             this.PrintRow("Cycles need to search an item in " + _searchFactory.SampleSize + " integers");
             this.PrintLine();
 
@@ -51,6 +52,14 @@ namespace BasicAlgorithms.UI
                 _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.Unsorted),
                 _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.Unsorted)
             );
+
+            var color = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("Target found, ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Target not found!");
+            Console.WriteLine();
+            Console.ForegroundColor = color;
         }
 
         private void PrintGrid(SearchResults l, SearchResults j, SearchResults b, SearchResults i)
