@@ -23,7 +23,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             {
                 for (var j = 0; j < data.Count - 1; j++)
                 {
-                    results.Cycles++;
                     if (data[j] > data[j + 1])
                     {
                         var tmp = data[j];

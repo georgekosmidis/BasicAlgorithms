@@ -8,6 +8,5 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms.Models
     {
         public int? PositionFound { get; set; }
         public long Ticks { get; set; }
-        public int Cycles { get; set; }
     }
 }

@@ -25,8 +25,6 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             int pos = -1;
             while (start <= end)
             {
-                searchResult.Cycles++;
-
                 pos = (int)(start + (((double)(end - start) / (data[end] - data[start])) * (value - data[start])));
                 if (pos < 0 || pos > data.Count - 1)
                 {

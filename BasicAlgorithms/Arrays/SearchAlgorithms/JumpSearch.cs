@@ -34,7 +34,6 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             //then find block
             for (var i = block * blockSize; i < length; i++)
             {
-                searchResult.Cycles++;
                 if (value == data[i])
                 {
                     searchResult.PositionFound = i;

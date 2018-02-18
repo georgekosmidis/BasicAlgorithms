@@ -21,7 +21,6 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
 
             for (var i = 0; i < data.Count; i++)
             {
-                searchResult.Cycles++;
                 if (data[i] == value)
                 {
                     searchResult.PositionFound = i;

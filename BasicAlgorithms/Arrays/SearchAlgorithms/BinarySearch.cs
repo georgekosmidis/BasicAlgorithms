@@ -24,9 +24,7 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             var middle = (end - start) / 2;//floor
 
             while (start < end)
-            {
-                searchResult.Cycles++;
-               
+            {               
                 if (data[middle] == value)
                     break;
 

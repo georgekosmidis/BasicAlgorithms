@@ -24,7 +24,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
                 var max = i;
                 for (var j = i + 1; j < data.Count; j++)
                 {
-                    results.Cycles++;
                     if (data[j] < data[max])
                         max = j;
                 }

@@ -8,7 +8,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
     public class HeapSort : ISort
     {
-        private int counter = 0;
+
         /// <summary>
         /// Heap Sort Algorithm [Time: O(n*Logn), Space: O(n)]
         /// </summary>
@@ -23,15 +23,12 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             
             //rearrange array to heap array sort
             for (var i = length / 2 - 1; i >= 0; i--)
-            {
-                counter++;
                 Heapify(data, length, i);
-            }
+
             //the largest element is first, move it to the end
             // reheapify everything (except the last) to bring the largest at the first position
             for (int i = length - 1; i >= 0; i--)
             {
-                counter++;
                 var tmp = data[0];
                 data[0] = data[i];
                 data[i] = tmp;
@@ -41,7 +38,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 
             watch.Stop();
             results.Ticks = watch.ElapsedMilliseconds;
-            results.Cycles = counter;
             results.SortedData = data;
             return results;
         }
@@ -68,7 +64,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             // and recurse with the new largest
             if (new_largest != largest)
             {
-                counter++;
                 var tmp = data[largest];
                 data[largest] = data[new_largest];
                 data[new_largest] = tmp;

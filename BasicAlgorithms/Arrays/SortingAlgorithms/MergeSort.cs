@@ -9,7 +9,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
     public class MergeSort : ISort
     {
-        private int cyclesCount = 0;
+
         /// <summary>
         /// Merge Sort Algorithm [Time: O(n*logn), Space: O(n)]
         /// </summary>
@@ -24,7 +24,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 
             watch.Stop();
             results.Ticks = watch.ElapsedMilliseconds;
-            results.Cycles = cyclesCount;
 
             results.SortedData = data;
             return results;
@@ -32,7 +31,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 
         private void _Sort(List<int> data, int start, int end)
         {
-            cyclesCount++;
             if (start < end)
             {
                 var middle = (start + end) / 2;
@@ -49,12 +47,10 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             var a2 = new List<int>();
             for (var i = start; i <= middle; i++)
             {
-                cyclesCount++;
                 a1.Add(data[i]);
             }
             for (var i = middle + 1; i <= end; i++)
             {
-                cyclesCount++;
                 a2.Add(data[i]);
             }
 
@@ -64,7 +60,6 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             var iData = start;
             while (i1 < a1.Count && i2 < a2.Count)
             {
-                cyclesCount++;
                 if (a1[i1] <= a2[i2])
                 {
                     data[iData] = a1[i1];
@@ -80,15 +75,10 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
 
             //add any item that left out
             while (i1 < a1.Count)
-            {
-                cyclesCount++;
                 data[iData++] = a1[i1++];
-            }
+
             while (i2 < a2.Count)
-            {
-                cyclesCount++;
                 data[iData++] = a2[i2++];
-            }
         }
     }
 }
