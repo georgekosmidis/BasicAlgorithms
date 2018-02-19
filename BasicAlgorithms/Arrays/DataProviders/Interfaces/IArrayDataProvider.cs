@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace BasicAlgorithms.DataProviders.Interfaces
+namespace BasicAlgorithms.Array.DataProviders.Interfaces
 {
-    public interface ISearchData
+    public interface IArrayDataProvider
     {
         int MinValue { get; }
         int AvgValue { get; }

@@ -29,7 +29,7 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             }
 
             watch.Stop();
-            searchResult.Ticks = watch.ElapsedMilliseconds;
+            searchResult.Ticks = watch.ElapsedTicks;
             return searchResult;
         }
     }

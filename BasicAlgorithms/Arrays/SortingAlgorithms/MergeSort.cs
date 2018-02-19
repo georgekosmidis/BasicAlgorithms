@@ -23,7 +23,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             _Sort(data, 0, data.Count - 1);
 
             watch.Stop();
-            results.Ticks = watch.ElapsedMilliseconds;
+            results.Ticks = watch.ElapsedTicks;
 
             results.SortedData = data;
             return results;

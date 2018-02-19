@@ -1,8 +1,8 @@
 ﻿using BasicAlgorithms.Arrays.SearchAlgorithms;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using BasicAlgorithms.DataProviders;
-using BasicAlgorithms.DataProviders.Models;
+using BasicAlgorithms.Array.DataProviders;
+using BasicAlgorithms.Array.DataProviders.Models;
 using System;
 
 namespace BasicAlgorithms.Arrays
@@ -14,7 +14,7 @@ namespace BasicAlgorithms.Arrays
         {
             SampleSize = sample;
         }
-        public SearchResults Estimate(eArraysSearchAlgorithms searchAlgorithm, eSearchDataProviders searchDataProvider)
+        public SearchResults Estimate(eArraysSearchAlgorithms searchAlgorithm, eArrayDataProviders searchDataProvider)
         {
             var _search = GetSearch(searchAlgorithm);
             var _searchData = new DataProvidersFactory(SampleSize).GetProvider(searchDataProvider);

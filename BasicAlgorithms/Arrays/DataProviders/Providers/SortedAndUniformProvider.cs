@@ -1,12 +1,12 @@
-﻿using BasicAlgorithms.DataProviders.Interfaces;
+﻿using BasicAlgorithms.Array.DataProviders.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BasicAlgorithms.DataProviders.Providers
+namespace BasicAlgorithms.Array.DataProviders.Providers
 {
-    public class SortedAndUniformProvider : ISearchData
+    public class SortedAndUniformProvider : IArrayDataProvider
     {
         public int MinValue { get; private set; }
         public int MaxValue { get; private set; }

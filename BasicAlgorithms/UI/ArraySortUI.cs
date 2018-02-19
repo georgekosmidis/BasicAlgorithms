@@ -1,7 +1,7 @@
 ﻿using BasicAlgorithms.Arrays;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using BasicAlgorithms.DataProviders.Models;
+using BasicAlgorithms.Array.DataProviders.Models;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
 using System;
 using System.Collections.Generic;
@@ -30,34 +30,34 @@ namespace BasicAlgorithms.UI
             this.PrintLine();
 
             PrintGrid("Insertion",
-                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eArrayDataProviders.Sorted)
             );
             PrintGrid("Selection",
-                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Selection, eArrayDataProviders.Sorted)
             );
             PrintGrid("Bubble",
-                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Bubble, eArrayDataProviders.Sorted)
             );
             PrintGrid("Heap",
-                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Heap, eArrayDataProviders.Sorted)
             );
             PrintGrid("Merge",
-                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Merge, eArrayDataProviders.Sorted)
             );
             PrintGrid("Quick",
-                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.Unsorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.ReverseSorted),
-                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eSearchDataProviders.Sorted)
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eArrayDataProviders.Unsorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eArrayDataProviders.ReverseSorted),
+                _sortFactory.Estimate(eArraySortAlgorithms.Quick, eArrayDataProviders.Sorted)
             );
         }
 

@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BasicAlgorithms.DataProviders;
+using BasicAlgorithms.Array.DataProviders;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using BasicAlgorithms.DataProviders.Providers;
+using BasicAlgorithms.Array.DataProviders.Providers;
 
-namespace BasicAlgorithms.Tests.DataProviders
+namespace BasicAlgorithms.Tests.Array.DataProviders
 {
     [TestClass]
     public class ReverseSortedProviderTests

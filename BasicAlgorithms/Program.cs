@@ -1,4 +1,5 @@
 ﻿using BasicAlgorithms.Arrays;
+using BasicAlgorithms.Trees;
 using BasicAlgorithms.UI;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,14 @@ namespace BasicAlgorithms
             do
             {
                 keyInfo = Home();
-            } while (keyInfo.KeyChar != '1' && keyInfo.KeyChar != '2');
+            } while (keyInfo.KeyChar != '1' && keyInfo.KeyChar != '2' && keyInfo.KeyChar != '3');
 
             if (keyInfo.KeyChar == '1')
-                Sort();
+                SortScreen();
             if (keyInfo.KeyChar == '2')
-                Search();
-
+                SearchScreen();
+            if (keyInfo.KeyChar == '3')
+                TreeScreen();
             goto Home;
         }
         static ConsoleKeyInfo Home()
@@ -29,10 +31,24 @@ namespace BasicAlgorithms
             Console.WriteLine("Hello! Please choose:");
             Console.WriteLine("1: Sort Algorithms");
             Console.WriteLine("2: Search Algorithms");
+            Console.WriteLine("3: Tree Algorithms");
+            return Console.ReadKey(true);
+        }
+        static ConsoleKeyInfo TreeScreen()
+        {
+            Console.Clear();
+            new TreeUI(
+                new TreeFactory(10000),
+                90
+            ).Print();
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key for home screen!");
+
             return Console.ReadKey(true);
         }
 
-        static ConsoleKeyInfo Sort()
+        static ConsoleKeyInfo SortScreen()
         {
             Console.Clear();
             new ArraySortUI(
@@ -45,7 +61,8 @@ namespace BasicAlgorithms
 
             return Console.ReadKey(true);
         }
-        static ConsoleKeyInfo Search()
+
+        static ConsoleKeyInfo SearchScreen()
         {
             Console.Clear();
             new ArraySearchUI(

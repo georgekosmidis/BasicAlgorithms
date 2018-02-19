@@ -1,6 +1,6 @@
 ﻿using BasicAlgorithms.Arrays;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using BasicAlgorithms.DataProviders.Models;
+using BasicAlgorithms.Array.DataProviders.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,28 +29,28 @@ namespace BasicAlgorithms.UI
             this.PrintRow("Sorted, uniform distribution array");
             this.PrintLine();
             PrintGrid(
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.SortedAndUniform),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.SortedAndUniform),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.SortedAndUniform),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.SortedAndUniform)
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eArrayDataProviders.SortedAndUniform),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eArrayDataProviders.SortedAndUniform),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eArrayDataProviders.SortedAndUniform),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eArrayDataProviders.SortedAndUniform)
             );
 
             this.PrintRow("Sorted, not evenly distributed array");
             this.PrintLine();
             PrintGrid(
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.Sorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.Sorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.Sorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.Sorted)
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eArrayDataProviders.Sorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eArrayDataProviders.Sorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eArrayDataProviders.Sorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eArrayDataProviders.Sorted)
             );
 
             this.PrintRow("Unsorted (random) array");
             this.PrintLine();
             PrintGrid(
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eSearchDataProviders.Unsorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eSearchDataProviders.Unsorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eSearchDataProviders.Unsorted),
-                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eSearchDataProviders.Unsorted)
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Linear, eArrayDataProviders.Unsorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Jump, eArrayDataProviders.Unsorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Binary, eArrayDataProviders.Unsorted),
+                _searchFactory.Estimate(eArraysSearchAlgorithms.Interpolation, eArrayDataProviders.Unsorted)
             );
 
             var color = Console.ForegroundColor;

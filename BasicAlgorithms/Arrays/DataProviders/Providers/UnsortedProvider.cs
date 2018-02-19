@@ -1,12 +1,12 @@
-﻿using BasicAlgorithms.DataProviders.Interfaces;
+﻿using BasicAlgorithms.Array.DataProviders.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BasicAlgorithms.DataProviders.Providers
+namespace BasicAlgorithms.Array.DataProviders.Providers
 {
-    public class ReverseSortedProvider : ISearchData
+    public class UnsortedProvider : IArrayDataProvider
     {
         public int MinValue { get; private set; }
         public int MaxValue { get; private set; }
@@ -16,20 +16,21 @@ namespace BasicAlgorithms.DataProviders.Providers
         public List<int> Data { get; private set; }
 
         /// <summary>
-        /// Provides a list of sorted but not uniformely distributed data
+        /// Provides a list of random integers
         /// </summary>
         /// <param name="size">Size of the list</param>
-        public ReverseSortedProvider(int size)
+        public UnsortedProvider(int size)
         {
             Data = new List<int>();
-            for (var i = size; i > 0; i--)
+            var rnd = new Random(1);
+            for (var i = 0; i < size; i++)
             {
-                Data.Add(i);
+                Data.Add(rnd.Next(0, size * 10));
             }
 
             MinValue = Data.Min();
             MaxValue = Data.Max();
-            AvgValue = Data.Where(x => x > (MinValue + MaxValue) / 2).OrderBy( x =>x).First();
+            AvgValue = Data.OrderBy(x=>x).First(x => x > (MinValue + MaxValue) / 2);
             RandomValue = Data[new Random((int)DateTime.Now.Ticks).Next(0, Data.Count - 1)];
             NotFoundValue = Data.Max() + 1;
         }

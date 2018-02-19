@@ -36,7 +36,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             }
 
             watch.Stop();
-            results.Ticks = watch.ElapsedMilliseconds;
+            results.Ticks = watch.ElapsedTicks;
 
             results.SortedData = data;
             return results;

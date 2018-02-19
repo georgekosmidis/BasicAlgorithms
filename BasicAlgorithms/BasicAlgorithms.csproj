@@ -11,8 +11,4 @@
     <None Remove="Trees\Creation\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Trees\" />
-  </ItemGroup>
-
 </Project>
