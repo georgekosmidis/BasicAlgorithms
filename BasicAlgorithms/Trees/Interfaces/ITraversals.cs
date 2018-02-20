@@ -5,7 +5,7 @@ namespace BasicAlgorithms.Trees.Interfaces
 {
     public interface ITraversals
     {
-        BinaryTree FirstFree(BinaryTree tree);
+        BinaryTree UnTraverse(List<int> data);
         List<int> Traverse(BinaryTree tree);
     }
 }

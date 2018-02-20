@@ -4,5 +4,5 @@ using System.Text;
 
 namespace BasicAlgorithms.Trees.SortingAlgorithms.Models
 {
-    public enum eTreeTypes { Heap }
+    public enum eTreeTypes { Heap, BST }
 }

@@ -7,7 +7,6 @@ using BasicAlgorithms.Array.DataProviders.Providers;
 using BasicAlgorithms.Trees;
 using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.TreeAlgorithms;
-using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
 
 namespace BasicAlgorithms.Tests.Trees.DataProviders
 {

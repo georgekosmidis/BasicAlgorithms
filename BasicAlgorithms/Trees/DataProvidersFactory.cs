@@ -7,7 +7,7 @@ using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
 using BasicAlgorithms.Trees.DataProviders.Models;
-using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
+using BasicAlgorithms.Trees.Traversals;
 
 namespace BasicAlgorithms.Trees
 {
@@ -25,7 +25,10 @@ namespace BasicAlgorithms.Trees
             {
                 case eTreeProvider.Heap:
                     return new TreeProvider(new HeapTree(), SampleSize);
-               
+                case eTreeProvider.BST:
+                    return new TreeProvider(new BinarySearchTree(), SampleSize);
+
+
             }
 
             throw new NotImplementedException("Unknown data provider '" + nameof(treeDataProvider) + "'");

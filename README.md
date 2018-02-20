@@ -22,7 +22,11 @@ Array Sorting
 Trees
 -------------
 1. Heap Tree
+2. BST Tree
 
+Traversals
+-------------
+1. Breadth First Traversal
 
 Comparison for Search Algorithms
 --------------------------------
@@ -31,3 +35,7 @@ Comparison for Search Algorithms
 Comparison for Sort Algorithms
 ------------------------------
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/sort_results.png" width="600" />
+
+Comparison for Trees
+------------------------------
+<img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/tree_results.png" width="600" />

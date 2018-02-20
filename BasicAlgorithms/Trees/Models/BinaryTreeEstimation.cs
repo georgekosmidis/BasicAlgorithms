@@ -7,9 +7,7 @@ namespace BasicAlgorithms.Trees.Models
     public class BinaryTreeEstimation
     {
         public BinaryTreeResults<BinaryTree> Deserialize { get; set; }
-        public BinaryTreeResults<List<int>> Serialize { get; set; }
         public BinaryTreeResults<BinaryTree> Search { get; set; }
         public BinaryTreeResults<BinaryTree> Insert { get; set; }
-        public BinaryTreeResults<BinaryTree> Delete { get; set; }
     }
 }

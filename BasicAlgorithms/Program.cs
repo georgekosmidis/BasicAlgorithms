@@ -38,7 +38,7 @@ namespace BasicAlgorithms
         {
             Console.Clear();
             new TreeUI(
-                new TreeFactory(10000),
+                new TreeFactory(1000000),
                 90
             ).Print();
 

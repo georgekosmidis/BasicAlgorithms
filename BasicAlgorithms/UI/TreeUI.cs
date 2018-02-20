@@ -30,13 +30,15 @@ namespace BasicAlgorithms.UI
             this.PrintLine();
 
             this.PrintLine();
-            this.PrintRow("", "Deserialize", "Serialize", "Search", "Insert", "Delete");
+            this.PrintRow("", "Creation", "Search", "Insert");
             this.PrintLine();
 
             PrintGrid("Heap",
                 _treeFactory.Estimate(eTreeTypes.Heap, eTreeProvider.Heap)
             );
-            
+            PrintGrid("BST",
+                _treeFactory.Estimate(eTreeTypes.BST, eTreeProvider.BST)
+            );
         }
 
         private void PrintGrid(string title, BinaryTreeEstimation r)
@@ -44,10 +46,8 @@ namespace BasicAlgorithms.UI
 
             this.PrintRow(title,
                 r.Deserialize.Ticks.ToString("00000000"),
-                r.Serialize.Ticks.ToString("00000000"),
                 r.Search.Ticks.ToString("00000000"),
-                r.Insert.Ticks.ToString("00000000"),
-                r.Delete.Ticks.ToString("00000000")
+                r.Insert.Ticks.ToString("00000000")
             );
             this.PrintLine();
         }

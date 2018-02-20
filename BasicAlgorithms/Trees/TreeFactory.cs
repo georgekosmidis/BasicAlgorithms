@@ -8,7 +8,6 @@ using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
 using BasicAlgorithms.Trees.Models;
 using BasicAlgorithms.Trees.DataProviders.Models;
-using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
 
 namespace BasicAlgorithms.Trees
 {
@@ -26,10 +25,8 @@ namespace BasicAlgorithms.Trees
 
             return new BinaryTreeEstimation()
             {
-                Deserialize = _tree.Deserialize(_treeData.Data),
-                Serialize = _tree.Serialize(_treeData.Tree),
+                Deserialize = _tree.CreateTree(_treeData.Data),
                 Search = _tree.Search(_treeData.Tree, _treeData.AvgValue),
-                Delete = _tree.Delete(_treeData.Tree, _treeData.AvgValue),
                 Insert = _tree.Insert(_treeData.Tree, _treeData.NotFoundValue),
             };
 
@@ -41,6 +38,8 @@ namespace BasicAlgorithms.Trees
             {
                 case eTreeTypes.Heap:
                     return new HeapTree();
+                case eTreeTypes.BST:
+                    return new BinarySearchTree();
             }
 
             throw new NotImplementedException("Unknown tree type '" + nameof(treeType) + "'");

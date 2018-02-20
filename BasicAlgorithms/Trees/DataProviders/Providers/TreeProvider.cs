@@ -35,7 +35,7 @@ namespace BasicAlgorithms.Trees.DataProviders.Providers
             RandomValue = Data[new Random((int)DateTime.Now.Ticks).Next(0, Data.Count - 1)];
             NotFoundValue = Data.Max() + 1;
 
-            Tree = tree.Deserialize(Data).Result;
+            Tree = tree.CreateTree(Data).Result;
         }
     }
 }
