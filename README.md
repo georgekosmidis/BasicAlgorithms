@@ -19,6 +19,11 @@ Array Sorting
 5. Merge Sort
 6. Quick Sort
 
+Trees
+-------------
+1. Heap Tree
+
+
 Comparison for Search Algorithms
 --------------------------------
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/search_results.png" width="600" />
