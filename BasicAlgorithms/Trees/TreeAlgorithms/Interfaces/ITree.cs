@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BasicAlgorithms.Trees.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 
 namespace BasicAlgorithms.Trees.Interfaces
 {

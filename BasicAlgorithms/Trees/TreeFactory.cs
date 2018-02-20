@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BasicAlgorithms.Trees.DataProviders.Interfaces;
-using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
-using BasicAlgorithms.Trees.Models;
 using BasicAlgorithms.Trees.DataProviders.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
 
 namespace BasicAlgorithms.Trees
 {
@@ -18,10 +18,10 @@ namespace BasicAlgorithms.Trees
         {
             SampleSize = sample;
         }
-        public BinaryTreeEstimation Estimate(eTreeTypes treeType, eTreeProvider dataProvider)
+        public BinaryTreeEstimation Estimate(eTreeTypes treeType)
         {
             var _tree = GetTree(treeType);
-            var _treeData = new DataProvidersFactory(SampleSize).GetProvider(dataProvider);
+            var _treeData = new DataProvidersFactory(SampleSize).GetProvider(treeType == eTreeTypes.BST ? eTreeDataProvider.BST : eTreeDataProvider.Heap);
 
             return new BinaryTreeEstimation()
             {

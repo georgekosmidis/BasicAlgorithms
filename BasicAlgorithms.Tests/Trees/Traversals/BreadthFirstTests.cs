@@ -1,6 +1,7 @@
 ﻿using BasicAlgorithms.Trees;
-using BasicAlgorithms.Trees.Traversals;
 using BasicAlgorithms.Trees.TreeAlgorithms;
+using BasicAlgorithms.Trees.TreeAlgorithms.Traversals;
+using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

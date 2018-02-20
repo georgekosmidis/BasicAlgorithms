@@ -15,7 +15,7 @@ namespace BasicAlgorithms
             do
             {
                 keyInfo = Home();
-            } while (keyInfo.KeyChar != '1' && keyInfo.KeyChar != '2' && keyInfo.KeyChar != '3');
+            } while (keyInfo.KeyChar != '1' && keyInfo.KeyChar != '2' && keyInfo.KeyChar != '3' && keyInfo.KeyChar != '4');
 
             if (keyInfo.KeyChar == '1')
                 SortScreen();
@@ -23,6 +23,8 @@ namespace BasicAlgorithms
                 SearchScreen();
             if (keyInfo.KeyChar == '3')
                 TreeScreen();
+            if (keyInfo.KeyChar == '4')
+                TraversalScreen();
             goto Home;
         }
         static ConsoleKeyInfo Home()
@@ -32,8 +34,23 @@ namespace BasicAlgorithms
             Console.WriteLine("1: Sort Algorithms");
             Console.WriteLine("2: Search Algorithms");
             Console.WriteLine("3: Tree Algorithms");
+            Console.WriteLine("4: Traversal Algorithms");
             return Console.ReadKey(true);
         }
+        static ConsoleKeyInfo TraversalScreen()
+        {
+            Console.Clear();
+            new TraversalUI(
+                new TraversalFactory(6),
+                90
+            ).Print();
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key for home screen!");
+
+            return Console.ReadKey(true);
+        }
+
         static ConsoleKeyInfo TreeScreen()
         {
             Console.Clear();

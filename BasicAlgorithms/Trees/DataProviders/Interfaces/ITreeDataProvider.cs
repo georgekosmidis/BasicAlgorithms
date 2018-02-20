@@ -1,4 +1,4 @@
-﻿using BasicAlgorithms.Trees.Models;
+﻿using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 using System.Collections.Generic;
 
 namespace BasicAlgorithms.Trees.DataProviders.Interfaces

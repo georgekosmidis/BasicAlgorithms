@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using BasicAlgorithms.Trees.DataProviders.Interfaces;
 using BasicAlgorithms.Trees.DataProviders.Providers;
-using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
 using BasicAlgorithms.Trees.DataProviders.Models;
-using BasicAlgorithms.Trees.Traversals;
+using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
 
 namespace BasicAlgorithms.Trees
 {
@@ -19,16 +18,14 @@ namespace BasicAlgorithms.Trees
             SampleSize = sampleSize;
         }
 
-        public ITreeDataProvider GetProvider(eTreeProvider treeDataProvider)
+        public ITreeDataProvider GetProvider(eTreeDataProvider treeDataProvider)
         {
             switch (treeDataProvider)
             {
-                case eTreeProvider.Heap:
-                    return new TreeProvider(new HeapTree(), SampleSize);
-                case eTreeProvider.BST:
-                    return new TreeProvider(new BinarySearchTree(), SampleSize);
-
-
+                case eTreeDataProvider.Heap:
+                    return new TreeDataProvider(new HeapTree(), SampleSize);
+                case eTreeDataProvider.BST:
+                    return new TreeDataProvider(new BinarySearchTree(), SampleSize);
             }
 
             throw new NotImplementedException("Unknown data provider '" + nameof(treeDataProvider) + "'");

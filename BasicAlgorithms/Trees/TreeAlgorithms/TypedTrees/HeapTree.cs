@@ -1,11 +1,11 @@
 ﻿using BasicAlgorithms.Trees.Interfaces;
-using BasicAlgorithms.Trees.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BasicAlgorithms.Trees.TreeAlgorithms
+namespace BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees
 {
     public class HeapTree : ITree
     {

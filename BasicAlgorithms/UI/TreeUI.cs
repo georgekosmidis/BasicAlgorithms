@@ -7,9 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BasicAlgorithms.Trees;
-using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.DataProviders.Models;
-using BasicAlgorithms.Trees.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 
 namespace BasicAlgorithms.UI
 {
@@ -34,10 +33,10 @@ namespace BasicAlgorithms.UI
             this.PrintLine();
 
             PrintGrid("Heap",
-                _treeFactory.Estimate(eTreeTypes.Heap, eTreeProvider.Heap)
+                _treeFactory.Estimate(eTreeTypes.Heap)
             );
             PrintGrid("BST",
-                _treeFactory.Estimate(eTreeTypes.BST, eTreeProvider.BST)
+                _treeFactory.Estimate(eTreeTypes.BST)
             );
         }
 

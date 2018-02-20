@@ -4,6 +4,6 @@ using System.Text;
 
 namespace BasicAlgorithms.Trees.DataProviders.Models
 {
-    public enum eTreeProvider { Heap, BST }
+    public enum eTreeDataProvider { Heap, BST }
 
 }

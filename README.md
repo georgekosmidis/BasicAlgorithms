@@ -27,6 +27,9 @@ Trees
 Traversals
 -------------
 1. Breadth First Traversal
+2. InOrder Traversal
+3. PostOrder Traversal
+4. PreOrder Traversal
 
 Comparison for Search Algorithms
 --------------------------------
@@ -39,3 +42,7 @@ Comparison for Sort Algorithms
 Comparison for Trees
 ------------------------------
 <img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/tree_results.png" width="600" />
+
+Comparison for Traversals
+------------------------------
+<img src="https://raw.githubusercontent.com/georgekosmidis/SearchAlgorithms/master/README/traversal_results.png" width="600" />

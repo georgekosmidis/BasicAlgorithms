@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.Trees.Models
+namespace BasicAlgorithms.Trees.TreeAlgorithms.Models
 {
     public class BinaryTreeResults<T>
     {

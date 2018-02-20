@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BasicAlgorithms.Trees.Models;
 using BasicAlgorithms.Trees.DataProviders.Interfaces;
+using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 
 namespace BasicAlgorithms.Trees.DataProviders.Providers
 {
-    public class TreeProvider : ITreeDataProvider
+    public class TreeDataProvider : ITreeDataProvider
     {
         public int MinValue { get; private set; }
         public int MaxValue { get; private set; }
@@ -21,7 +21,7 @@ namespace BasicAlgorithms.Trees.DataProviders.Providers
         /// Provides a list of sorted but not uniformely distributed data
         /// </summary>
         /// <param name="size">Size of the list</param>
-        public TreeProvider(ITree tree, int size)
+        public TreeDataProvider(ITree tree, int size)
         {
             Data = new List<int>();
             for (var i = size; i > 0; i--)

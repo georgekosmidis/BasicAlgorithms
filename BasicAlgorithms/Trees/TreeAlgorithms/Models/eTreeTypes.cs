@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BasicAlgorithms.Trees.SortingAlgorithms.Models
+namespace BasicAlgorithms.Trees.TreeAlgorithms.Models
 {
     public enum eTreeTypes { Heap, BST }
 }
