@@ -9,11 +9,9 @@ namespace BasicAlgorithms.Trees.TreeAlgorithms
 {
     public class HeapTree : ITree
     {
-        ITraversals _breadthFirstTraversal;
-        public HeapTree(ITraversals breadthFirstTraversal)
+
+        public HeapTree()
         {
-            _breadthFirstTraversal = breadthFirstTraversal;
-            //todo: guard, is this a breadth-first traversal?
         }
 
         public BinaryTreeResults<BinaryTree> Deserialize(List<int> data)
@@ -33,32 +31,36 @@ namespace BasicAlgorithms.Trees.TreeAlgorithms
 
         public BinaryTreeResults<List<int>> Serialize(BinaryTree tree)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var list = _Serialize(tree);
+            watch.Stop();
+
             return new BinaryTreeResults<List<int>>()
             {
-                Result = new List<int>(),
-                Ticks = 0
+                Result = list,
+                Ticks = watch.ElapsedTicks
             };
         }
 
-        public BinaryTreeResults<int> Search(BinaryTree tree, int item)
+        public BinaryTreeResults<BinaryTree> Search(BinaryTree tree, int item)
         {
-            return new BinaryTreeResults<int>()
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var result = _Search(tree, item);
+            watch.Stop();
+
+            return new BinaryTreeResults<BinaryTree>()
             {
-                Result = 0,
-                Ticks = 0
+                Result = result,
+                Ticks = watch.ElapsedTicks
             };
         }
 
         public BinaryTreeResults<BinaryTree> Insert(BinaryTree tree, int item)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-
             _Insert(tree, item);
-            //var node = _breadthFirstTraversal.FirstFree(tree);
-            //node.Data = item;
-            //_FixTree(tree);
-
             watch.Stop();
+
             return new BinaryTreeResults<BinaryTree>()
             {
                 Result = tree,
@@ -66,72 +68,52 @@ namespace BasicAlgorithms.Trees.TreeAlgorithms
             };
         }
 
-        private void _Insert(BinaryTree tree, int item)
+        public BinaryTreeResults<BinaryTree> Delete(BinaryTree tree, int item)
         {
-            if (item >= tree.Data)
-            {
-                var tmp = tree.Data;
-                tree.Data = item;
-                if (tree.LeftNode == null)
-                    tree.LeftNode = new BinaryTree() { Data = tmp };
-                else if (tree.RightNode == null)
-                    tree.RightNode = new BinaryTree() { Data = tmp };
-                else
-                {
-                    if (tree.LeftNode.Data <= item)
-                        _Insert(tree.LeftNode, tmp);
-                    else
-                        _Insert(tree.RightNode, tmp);
-                }
-            }
-            else
-            {
-                if (tree.LeftNode == null)
-                    tree.LeftNode = new BinaryTree() { Data = item };
-                else if (tree.RightNode == null)
-                    tree.RightNode = new BinaryTree() { Data = item };
-                else
-                {
-                    if (tree.LeftNode.Data <= item)
-                        _Insert(tree.LeftNode, item);
-                    else
-                        _Insert(tree.RightNode, item);
-                }
-            }
-        }
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            _Delete(tree, item);
+            watch.Stop();
 
-
-        public BinaryTreeResults<int> Delete(BinaryTree tree, int item)
-        {
-            return new BinaryTreeResults<int>()
+            return new BinaryTreeResults<BinaryTree>()
             {
-                Result = 0,
-                Ticks = 0
+                Result = tree,
+                Ticks = watch.ElapsedTicks
             };
         }
-
-        private void _FixTree(BinaryTree tree)
+        private void _Delete(BinaryTree tree, int item)
         {
-            if (tree.LeftNode != null)
-                _FixTree(tree.LeftNode);
-            if (tree.RightNode != null)
-                _FixTree(tree.RightNode);
 
-            if (tree.LeftNode != null && tree.Data < tree.LeftNode.Data)
+            //find last item and disconnected from its parent
+            BinaryTree deleteNode = new BinaryTree();
+            var queue = new List<Tuple<BinaryTree, BinaryTree>>();
+            queue.Insert(0, new Tuple<BinaryTree, BinaryTree>(null, tree));
+            while (queue.Count > 0)
             {
-                var tmp = tree.LeftNode.Data;
-                tree.LeftNode.Data = tree.Data;
-                tree.Data = tmp;
-            }
+                var lastItem = queue.Last();
+                queue.Remove(lastItem);
+                if (lastItem.Item2.Data == item)
+                    deleteNode = lastItem.Item2;
 
-            if (tree.RightNode != null && tree.Data < tree.RightNode.Data)
-            {
-                var tmp = tree.RightNode.Data;
-                tree.RightNode.Data = tree.Data;
-                tree.Data = tmp;
-            }
+                if (lastItem.Item2.LeftNode != null)
+                    queue.Insert(0, new Tuple<BinaryTree, BinaryTree>(lastItem.Item2, lastItem.Item2.LeftNode));
 
+                if (lastItem.Item2.RightNode != null)
+                    queue.Insert(0, new Tuple<BinaryTree, BinaryTree>(lastItem.Item2, lastItem.Item2.RightNode));
+
+                if (queue.Count == 0)
+                {
+                    if (lastItem.Item1.RightNode == null)
+                        lastItem.Item1.LeftNode = null;
+                    else
+                        lastItem.Item1.RightNode = null;
+
+                    deleteNode.Data = lastItem.Item2.Data;
+                    _FixTree(deleteNode);
+                }
+
+            }            
         }
+
 
         private BinaryTree _Deserialize(List<int> data, int length, int largest)
         {
@@ -164,7 +146,88 @@ namespace BasicAlgorithms.Trees.TreeAlgorithms
                 LeftNode = (2 * largest + 1 < length) ? _Deserialize(data, length, 2 * largest + 1) : null,
                 RightNode = (2 * largest + 2 < length) ? _Deserialize(data, length, 2 * largest + 2) : null
             };
+        }
+
+        private List<int> _Serialize(BinaryTree tree)
+        {
+            var list = new List<int>()
+            {
+                { tree.Data }
+            };
+
+            if (tree.LeftNode != null)
+                list.AddRange(_Serialize(tree.LeftNode));
+            if (tree.RightNode != null)
+                list.AddRange(_Serialize(tree.RightNode));
+
+            return list;
+        }
+
+        private BinaryTree _Search(BinaryTree tree, int item)
+        {
+            BinaryTree result = new BinaryTree();
+
+            if (tree == null)
+                return null;
+
+            if (tree.Data == item)
+                return tree;
+
+            if (tree.LeftNode != null && item <= tree.LeftNode.Data)
+                result = _Search(tree.LeftNode, item);
+            if (tree.RightNode != null && item <= tree.RightNode.Data)
+                result = _Search(tree.RightNode, item);
+
+            return result;
+        }
+
+        private void _Insert(BinaryTree tree, int item)
+        {
+            var insertItem = item;
+            if (item >= tree.Data)
+            {
+                insertItem = tree.Data;
+                tree.Data = item;
+            }
+
+            if (tree.LeftNode == null)
+                tree.LeftNode = new BinaryTree() { Data = insertItem };
+            else if (tree.RightNode == null)
+                tree.RightNode = new BinaryTree() { Data = insertItem };
+            else
+            {
+                if (tree.LeftNode.Data <= insertItem)
+                    _Insert(tree.LeftNode, insertItem);
+                else
+                    _Insert(tree.RightNode, insertItem);
+            }
 
         }
+
+        private void _FixTree(BinaryTree tree)
+        {
+            if (tree.LeftNode != null)
+                _FixTree(tree.LeftNode);
+            if (tree.RightNode != null)
+                _FixTree(tree.RightNode);
+
+            if (tree.LeftNode != null && tree.Data < tree.LeftNode.Data)
+            {
+                var tmp = tree.LeftNode.Data;
+                tree.LeftNode.Data = tree.Data;
+                tree.Data = tmp;
+            }
+
+            if (tree.RightNode != null && tree.Data < tree.RightNode.Data)
+            {
+                var tmp = tree.RightNode.Data;
+                tree.RightNode.Data = tree.Data;
+                tree.Data = tmp;
+            }
+
+        }
+
+
+
     }
 }

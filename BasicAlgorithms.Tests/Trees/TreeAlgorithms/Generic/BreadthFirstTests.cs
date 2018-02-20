@@ -17,7 +17,7 @@ namespace BasicAlgorithms.Tests.Trees.TreeAlgorithms
         [TestMethod]
         public void BreadthFirst_FindFirstFree()
         {
-            var heapTree = new HeapTree(new BreadthFirstTraversal());
+            var heapTree = new HeapTree();
             var list = new List<int>() { 2, 4, 3, 1 };
             var tree = heapTree.Deserialize(list).Result;
             Assert.IsNull(tree.LeftNode.RightNode);

@@ -17,11 +17,7 @@ namespace BasicAlgorithms.Tests.Trees.DataProviders
         [TestMethod]
         public void HeapTreeProvider_GetTree()
         {
-            var data = new TreeProvider(
-                            new HeapTree(
-                                new BreadthFirstTraversal()
-                            ),
-                            10);
+            var data = new TreeProvider(new HeapTree(), 10);
 
             Assert.AreEqual(1, data.MinValue);
             Assert.AreEqual(10, data.MaxValue);

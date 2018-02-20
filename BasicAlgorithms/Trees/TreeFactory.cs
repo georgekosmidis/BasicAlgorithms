@@ -40,7 +40,7 @@ namespace BasicAlgorithms.Trees
             switch (treeType)
             {
                 case eTreeTypes.Heap:
-                    return new HeapTree(new BreadthFirstTraversal());
+                    return new HeapTree();
             }
 
             throw new NotImplementedException("Unknown tree type '" + nameof(treeType) + "'");

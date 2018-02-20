@@ -8,8 +8,8 @@ namespace BasicAlgorithms.Trees.Models
     {
         public BinaryTreeResults<BinaryTree> Deserialize { get; set; }
         public BinaryTreeResults<List<int>> Serialize { get; set; }
-        public BinaryTreeResults<int> Search { get; set; }
+        public BinaryTreeResults<BinaryTree> Search { get; set; }
         public BinaryTreeResults<BinaryTree> Insert { get; set; }
-        public BinaryTreeResults<int> Delete { get; set; }
+        public BinaryTreeResults<BinaryTree> Delete { get; set; }
     }
 }

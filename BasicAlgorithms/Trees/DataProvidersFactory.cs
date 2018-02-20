@@ -24,7 +24,7 @@ namespace BasicAlgorithms.Trees
             switch (treeDataProvider)
             {
                 case eTreeProvider.Heap:
-                    return new TreeProvider(new HeapTree(new BreadthFirstTraversal()), SampleSize);
+                    return new TreeProvider(new HeapTree(), SampleSize);
                
             }
 
