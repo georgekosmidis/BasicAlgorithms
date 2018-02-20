@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using BasicAlgorithmsArrays.SortingAlgorithms;
 
-namespace BasicAlgorithms.Tests.ArraysArrays.SortingAlgorithms
+namespace BasicAlgorithms.Tests.Arrays.SortingAlgorithms
 {
     [TestClass]
     public class SelectionSortTests

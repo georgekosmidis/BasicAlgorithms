@@ -7,7 +7,7 @@ namespace BasicAlgorithms.Trees.Interfaces
     {
         BinaryTreeResults<int> Delete(BinaryTree tree, int item);
         BinaryTreeResults<BinaryTree> Deserialize(List<int> data);
-        BinaryTreeResults<int> Insert(BinaryTree tree, int item);
+        BinaryTreeResults<BinaryTree> Insert(BinaryTree tree, int item);
         BinaryTreeResults<int> Search(BinaryTree tree, int item);
         BinaryTreeResults<List<int>> Serialize(BinaryTree tree);
     }

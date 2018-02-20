@@ -7,8 +7,9 @@ using BasicAlgorithms.Array.DataProviders.Providers;
 using BasicAlgorithms.Trees;
 using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.TreeAlgorithms;
+using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
 
-namespace BasicAlgorithms.Tests.Array.DataProviders
+namespace BasicAlgorithms.Tests.Trees.DataProviders
 {
     [TestClass]
     public class HeapTreeProviderTests
@@ -16,7 +17,11 @@ namespace BasicAlgorithms.Tests.Array.DataProviders
         [TestMethod]
         public void HeapTreeProvider_GetTree()
         {
-            var data = new TreeProvider(new HeapTree(), 10);
+            var data = new TreeProvider(
+                            new HeapTree(
+                                new BreadthFirstTraversal()
+                            ),
+                            10);
 
             Assert.AreEqual(1, data.MinValue);
             Assert.AreEqual(10, data.MaxValue);

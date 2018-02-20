@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using BasicAlgorithms.Array.DataProviders.Providers;
 
-namespace BasicAlgorithms.Tests.Array.DataProviders
+namespace BasicAlgorithms.Tests.Arrays.DataProviders
 {
     [TestClass]
     public class SortedAndUniformProviderTests

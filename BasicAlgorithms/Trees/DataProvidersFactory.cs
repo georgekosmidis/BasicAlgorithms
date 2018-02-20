@@ -7,6 +7,7 @@ using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
 using BasicAlgorithms.Trees.DataProviders.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
 
 namespace BasicAlgorithms.Trees
 {
@@ -23,7 +24,7 @@ namespace BasicAlgorithms.Trees
             switch (treeDataProvider)
             {
                 case eTreeProvider.Heap:
-                    return new TreeProvider(new HeapTree(), SampleSize);
+                    return new TreeProvider(new HeapTree(new BreadthFirstTraversal()), SampleSize);
                
             }
 

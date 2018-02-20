@@ -8,6 +8,7 @@ using BasicAlgorithms.Trees.SortingAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms;
 using BasicAlgorithms.Trees.Models;
 using BasicAlgorithms.Trees.DataProviders.Models;
+using BasicAlgorithms.Trees.TreeAlgorithms.Generic;
 
 namespace BasicAlgorithms.Trees
 {
@@ -29,7 +30,7 @@ namespace BasicAlgorithms.Trees
                 Serialize = _tree.Serialize(_treeData.Tree),
                 Search = _tree.Search(_treeData.Tree, _treeData.AvgValue),
                 Delete = _tree.Delete(_treeData.Tree, _treeData.AvgValue),
-                Insert = _tree.Delete(_treeData.Tree, _treeData.NotFoundValue),
+                Insert = _tree.Insert(_treeData.Tree, _treeData.NotFoundValue),
             };
 
         }
@@ -39,7 +40,7 @@ namespace BasicAlgorithms.Trees
             switch (treeType)
             {
                 case eTreeTypes.Heap:
-                    return new HeapTree();
+                    return new HeapTree(new BreadthFirstTraversal());
             }
 
             throw new NotImplementedException("Unknown tree type '" + nameof(treeType) + "'");
