@@ -10,9 +10,32 @@ namespace BasicAlgorithms.Tests.Practice
     public class VariousProblemsTests
     {
 
+        [TestMethod]
+        public void VariousProblems_LeftRotateMatrix()
+        {
+            var problems = new VariousProblems();
+
+            var rotated = problems.LeftRotateMatrix(2, 2, 1, new List<int> { 1, 2, 3, 4 });
+
+            Assert.AreEqual(2, rotated[0]);
+            Assert.AreEqual(1, rotated[1]);
+            Assert.AreEqual(4, rotated[2]);
+            Assert.AreEqual(3, rotated[3]);
+        }
+
 
         [TestMethod]
-        public void FindCharacterBinary()
+        public void VariousProblems_PrimeNumberSets()
+        {
+            var problems = new VariousProblems();
+
+            Assert.AreEqual(4, problems.PrimeNumberSets(6, 10));
+            Assert.AreEqual(5, problems.PrimeNumberSets(10, 15));
+        }
+
+
+        [TestMethod]
+        public void VariousProblems_FindCharacterBinary()
         {
             var problems = new VariousProblems();
 
@@ -22,7 +45,7 @@ namespace BasicAlgorithms.Tests.Practice
 
 
         [TestMethod]
-        public void MaximumTipCalculator()
+        public void VariousProblems_MaximumTipCalculator()
         {
             var problems = new VariousProblems();
 
@@ -38,7 +61,7 @@ namespace BasicAlgorithms.Tests.Practice
         }
 
         [TestMethod]
-        public void ArrayContiguousIntegers()
+        public void VariousProblems_ArrayContiguousIntegers()
         {
             var problems = new VariousProblems();
             var list = new List<int> { 5, 2, 3, 6, 4, 4, 6, 6 };
@@ -49,7 +72,7 @@ namespace BasicAlgorithms.Tests.Practice
         }
 
         [TestMethod]
-        public void OrderByAbsoluteOrder()
+        public void VariousProblems_OrderByAbsoluteOrder()
         {
             var problems = new VariousProblems();
 

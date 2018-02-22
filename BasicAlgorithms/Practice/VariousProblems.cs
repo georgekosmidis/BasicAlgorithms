@@ -9,6 +9,65 @@ namespace BasicAlgorithms.Practice
     public class VariousProblems
     {
 
+
+        /// <summary>
+        /// Given a Matrix of size M x N. Your task is to print the matrix K times left rotated.
+        /// https://practice.geeksforgeeks.org/problems/left-rotate-matrix-k-times/0
+        /// </summary>
+        public List<int> LeftRotateMatrix(int M, int N, int K, List<int> data)
+        {
+            var rotated = new List<int>();
+            while (data.Count > 0)
+            {
+                var tmp = new List<int>();
+                for (var i = N - 1; i >=0; i--)
+                {
+                    tmp.Add(data[i]);
+                    data.Remove(data[i]);
+                }
+                rotated.AddRange(tmp);
+
+            }
+
+            return rotated;
+        }
+
+        /// <summary>
+        /// Given two integers ‘L’ and ‘R’, write a program that finds the count of numbers having prime number of set bits in their binary representation in the range [L, R].
+        /// https://practice.geeksforgeeks.org/problems/prime-number-of-set-bits/0
+        /// </summary>
+        public int PrimeNumberSets(int L, int R)
+        {
+            var primesCount = 0;
+            for (var i = L; i <= R; i++)
+            {
+                var setBitsCount = Convert.ToString(i, 2).Where(x => x == '1').Count();
+                if (setBitsCount == 1)
+                    continue;
+                if (setBitsCount == 2 || setBitsCount == 3)
+                {
+                    primesCount++;
+                    continue;
+                }
+
+                var root = (int)Math.Sqrt(setBitsCount);
+                var isPrime = true;
+                for (var j = 2; j <= root; j++)
+                {
+                    if (setBitsCount % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                    primesCount++;
+            }
+
+            return primesCount;
+
+        }
+
         /// <summary>
         /// https://practice.geeksforgeeks.org/problems/find-k-th-character-in-string/0
         /// </summary>
