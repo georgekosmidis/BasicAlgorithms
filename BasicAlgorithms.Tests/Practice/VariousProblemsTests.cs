@@ -11,6 +11,25 @@ namespace BasicAlgorithms.Tests.Practice
     {
 
         [TestMethod]
+        public void VariousProblems_LongestPalindrom()
+        {
+            var problems = new VariousProblems();
+
+            string result;
+
+            result = problems.LongestPalindrom("bb");
+            Assert.AreEqual("bb", result);
+
+            result = problems.LongestPalindrom("babad");
+            Assert.AreEqual("aba", result);
+
+            result = problems.LongestPalindrom("eabcb");
+            Assert.AreEqual("bcb", result);
+            
+        }
+
+
+        [TestMethod]
         public void VariousProblems_LeftRotateMatrix()
         {
             var problems = new VariousProblems();

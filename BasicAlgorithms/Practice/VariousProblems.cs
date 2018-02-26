@@ -9,6 +9,45 @@ namespace BasicAlgorithms.Practice
     public class VariousProblems
     {
 
+        /// <summary>
+        /// Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+        /// 
+        /// </summary>
+        public string LongestPalindrom(string s)
+        {
+            var start = 0;
+            var end = 0;
+            for (var i = 0; i < s.Length; i++)
+            {
+                var tmp = LongestPalindrom_CheckLength(s, i, i);
+                var tmp2 = LongestPalindrom_CheckLength(s, i, i + 1);
+                var max = Math.Max(tmp, tmp2);
+                if (max > end - start)
+                {
+                    start = i - (max - 1) / 2;
+                    end = i + max / 2;
+                }
+            }
+            return s.Substring(start, end - start + 1);
+        }
+        private int LongestPalindrom_CheckLength(string s, int left, int right)
+        {
+            var _left = left;
+            var _right = right;
+
+            while (_left >= 0 && _right < s.Length && s.Substring(_left, 1) == s.Substring(_right, 1))
+            {
+                _left--;
+                _right++;
+            }
+            //if (_left <= 0)
+            //    _left = 0;
+            //else
+            //    _left++;
+
+            //_right = Math.Min(_right, s.Length);
+            return _right - _left - 1;// - (right - left);
+        }
 
         /// <summary>
         /// Given a Matrix of size M x N. Your task is to print the matrix K times left rotated.
@@ -20,7 +59,7 @@ namespace BasicAlgorithms.Practice
             while (data.Count > 0)
             {
                 var tmp = new List<int>();
-                for (var i = N - 1; i >=0; i--)
+                for (var i = N - 1; i >= 0; i--)
                 {
                     tmp.Add(data[i]);
                     data.Remove(data[i]);
