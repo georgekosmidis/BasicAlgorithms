@@ -1,6 +1,5 @@
 Basic Algorithms Comparison in C#
 =================================
-
 Tests and compares the time the following algorithms need to perform their intended job
 
 Array Search
