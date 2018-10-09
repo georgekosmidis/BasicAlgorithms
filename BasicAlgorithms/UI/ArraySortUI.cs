@@ -1,11 +1,7 @@
-﻿using BasicAlgorithms.Arrays;
-using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
+﻿using BasicAlgorithms.Array.DataProviders.Models;
+using BasicAlgorithms.Arrays;
 using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using BasicAlgorithms.Array.DataProviders.Models;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.UI
 {
@@ -20,14 +16,14 @@ namespace BasicAlgorithms.UI
 
         public void Print()
         {
-            this.PrintLine();
+            PrintLine();
 
-            this.PrintRow("Ticks needed to sort " + _sortFactory.SampleSize + " integers");
-            this.PrintLine();
+            PrintRow("Ticks needed to sort " + _sortFactory.SampleSize + " integers");
+            PrintLine();
 
-            this.PrintLine();
-            this.PrintRow("", "Random", "Reversed", "Sorted");
-            this.PrintLine();
+            PrintLine();
+            PrintRow("", "Random", "Reversed", "Sorted");
+            PrintLine();
 
             PrintGrid("Insertion",
                 _sortFactory.Estimate(eArraySortAlgorithms.Insertion, eArrayDataProviders.Unsorted),
@@ -64,12 +60,12 @@ namespace BasicAlgorithms.UI
         private void PrintGrid(string title, SortResults u, SortResults r, SortResults s)
         {
 
-            this.PrintRow(title,
+            PrintRow(title,
                 u.Ticks.ToString("00000000"),
                 r.Ticks.ToString("00000000"),
                 s.Ticks.ToString("00000000")
             );
-            this.PrintLine();
+            PrintLine();
         }
     }
 }

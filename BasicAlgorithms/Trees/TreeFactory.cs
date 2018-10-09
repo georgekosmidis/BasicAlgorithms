@@ -1,13 +1,8 @@
-﻿using BasicAlgorithms.Trees;
+﻿using BasicAlgorithms.Trees.DataProviders.Models;
 using BasicAlgorithms.Trees.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BasicAlgorithms.Trees.DataProviders.Interfaces;
-using BasicAlgorithms.Trees.TreeAlgorithms;
-using BasicAlgorithms.Trees.DataProviders.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
+using System;
 
 namespace BasicAlgorithms.Trees
 {

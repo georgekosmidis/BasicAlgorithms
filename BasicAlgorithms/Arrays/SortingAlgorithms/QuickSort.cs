@@ -1,9 +1,6 @@
 ﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
@@ -45,7 +42,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             for (var i = start; i < end; i++)
             {
                 if (data[i] <= data[end])
-                {                   
+                {
                     var tmp = data[start];
                     data[start] = data[i];
                     data[i] = tmp;

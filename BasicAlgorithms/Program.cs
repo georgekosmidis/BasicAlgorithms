@@ -2,7 +2,6 @@
 using BasicAlgorithms.Trees;
 using BasicAlgorithms.UI;
 using System;
-using System.Collections.Generic;
 
 namespace BasicAlgorithms
 {

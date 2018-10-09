@@ -1,11 +1,7 @@
-﻿using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using BasicAlgorithms.Array.DataProviders.Interfaces;
+﻿using BasicAlgorithms.Array.DataProviders.Interfaces;
 using BasicAlgorithms.Array.DataProviders.Models;
 using BasicAlgorithms.Array.DataProviders.Providers;
-using BasicAlgorithms.Trees;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays
 {

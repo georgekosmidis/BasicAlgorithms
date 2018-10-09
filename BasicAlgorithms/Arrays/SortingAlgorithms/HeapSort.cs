@@ -1,8 +1,6 @@
 ﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithmsArrays.SortingAlgorithms
 {
@@ -20,7 +18,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
             var length = data.Count;
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            
+
             //rearrange array to heap array sort
             for (var i = length / 2 - 1; i >= 0; i--)
                 Heapify(data, length, i);
@@ -46,7 +44,7 @@ namespace BasicAlgorithmsArrays.SortingAlgorithms
         //space O(n) because of recursion, could be modified to a loop for O(1) complexity
         private void Heapify(List<int> data, int length, int largest)
         {
-            
+
             //assume largest and get left and right that should be smaller
             var new_largest = largest;
             var left = 2 * largest + 1;//left branch of heap tree

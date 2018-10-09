@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using BasicAlgorithmsArrays.SortingAlgorithms.Models;
+﻿using BasicAlgorithmsArrays.SortingAlgorithms.Models;
+using System.Collections.Generic;
 
 namespace BasicAlgorithmsArrays.SortingAlgorithms.Interfaces
 {

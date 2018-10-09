@@ -1,15 +1,8 @@
-﻿using BasicAlgorithms.Trees;
-using BasicAlgorithms.Trees.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BasicAlgorithms.Trees.DataProviders.Interfaces;
-using BasicAlgorithms.Trees.TreeAlgorithms;
+﻿using BasicAlgorithms.Trees.DataProviders.Interfaces;
 using BasicAlgorithms.Trees.DataProviders.Models;
 using BasicAlgorithms.Trees.TreeAlgorithms.Models;
-using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
-using BasicAlgorithms.Trees.TreeAlgorithms.Interfaces;
 using BasicAlgorithms.Trees.TreeAlgorithms.Traversals;
+using System;
 
 namespace BasicAlgorithms.Trees
 {
@@ -32,7 +25,7 @@ namespace BasicAlgorithms.Trees
                 BreadthFirstResult = new BreadthFirstTraversal().Traverse(treeData.Tree),
                 InOrderResult = new InOrderTraversal().Traverse(treeData.Tree),
                 PostOrderResult = new PostOrderTraversal().Traverse(treeData.Tree),
-                PreOrderResult= new PreOrderTraversal().Traverse(treeData.Tree),
+                PreOrderResult = new PreOrderTraversal().Traverse(treeData.Tree),
             };
         }
 

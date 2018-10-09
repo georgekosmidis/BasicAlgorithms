@@ -2,7 +2,6 @@
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays.SearchAlgorithms
 {
@@ -25,7 +24,7 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             int block = 0;
             while (block < length / blockSize)
             {
-                var blockUpperLimit = Math.Min((1 + block) * blockSize, length-1);
+                var blockUpperLimit = Math.Min((1 + block) * blockSize, length - 1);
                 if (value <= data[blockUpperLimit])//we ve jsut passed it
                     break;
                 block++;

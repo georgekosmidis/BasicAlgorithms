@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BasicAlgorithms.Array.DataProviders.Providers
 {
@@ -29,7 +28,7 @@ namespace BasicAlgorithms.Array.DataProviders.Providers
 
             MinValue = Data.Min();
             MaxValue = Data.Max();
-            AvgValue = Data.Where(x => x > (MinValue + MaxValue) / 2).OrderBy( x =>x).First();
+            AvgValue = Data.Where(x => x > (MinValue + MaxValue) / 2).OrderBy(x => x).First();
             RandomValue = Data[new Random((int)DateTime.Now.Ticks).Next(0, Data.Count - 1)];
             NotFoundValue = Data.Max() + 1;
         }

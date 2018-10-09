@@ -1,12 +1,9 @@
-﻿using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using BasicAlgorithms.Array.DataProviders;
-using BasicAlgorithms.Array.DataProviders.Models;
+﻿using BasicAlgorithms.Array.DataProviders.Models;
+using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
 using BasicAlgorithmsArrays.SortingAlgorithms;
 using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays
 {
@@ -19,7 +16,7 @@ namespace BasicAlgorithms.Arrays
         }
         public SortResults Estimate(eArraySortAlgorithms sortAlgorithm, eArrayDataProviders searchDataProvider)
         {
-            var _sort= GetSort(sortAlgorithm);
+            var _sort = GetSort(sortAlgorithm);
             var _searchData = new DataProvidersFactory(SampleSize).GetProvider(searchDataProvider);
 
             return _sort.Sort(_searchData.Data);

@@ -1,12 +1,8 @@
-﻿using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BasicAlgorithms.Trees.DataProviders.Interfaces;
-using BasicAlgorithms.Trees.DataProviders.Providers;
-using BasicAlgorithms.Trees.TreeAlgorithms;
+﻿using BasicAlgorithms.Trees.DataProviders.Interfaces;
 using BasicAlgorithms.Trees.DataProviders.Models;
+using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
+using System;
 
 namespace BasicAlgorithms.Trees
 {

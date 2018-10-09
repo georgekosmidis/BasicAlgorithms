@@ -1,8 +1,6 @@
 ﻿using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays.SearchAlgorithms
 {
@@ -24,7 +22,7 @@ namespace BasicAlgorithms.Arrays.SearchAlgorithms
             var middle = (end - start) / 2;//floor
 
             while (start < end)
-            {               
+            {
                 if (data[middle] == value)
                     break;
 

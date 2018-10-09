@@ -1,8 +1,6 @@
 ﻿using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays.SearchAlgorithms
 {
