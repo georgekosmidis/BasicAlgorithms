@@ -1,8 +1,6 @@
 ﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
 using BasicAlgorithmsArrays.SortingAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithmsArrays.SortingAlgorithms
 {

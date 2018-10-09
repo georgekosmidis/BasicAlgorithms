@@ -1,14 +1,6 @@
-﻿using BasicAlgorithms.Arrays;
-using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
-using BasicAlgorithms.Array.DataProviders.Models;
-using BasicAlgorithmsArrays.SortingAlgorithms.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BasicAlgorithms.Trees;
-using BasicAlgorithms.Trees.DataProviders.Models;
+﻿using BasicAlgorithms.Trees;
 using BasicAlgorithms.Trees.TreeAlgorithms.Models;
+using System;
 
 namespace BasicAlgorithms.UI
 {
@@ -23,27 +15,27 @@ namespace BasicAlgorithms.UI
 
         public void Print()
         {
-            this.PrintLine();
+            PrintLine();
 
-            this.PrintRow("Traversal Algorithms Differences for the following tree");
-            this.PrintLine();
+            PrintRow("Traversal Algorithms Differences for the following tree");
+            PrintLine();
 
             var traversal = _traversalFactory.Traverse(eTreeTypes.BST);
 
             PrintTree(traversal.Tree, "");
-            this.PrintLine();
+            PrintLine();
 
-            this.PrintRow("Breadth First",
-                String.Join(" ", traversal.BreadthFirstResult)
+            PrintRow("Breadth First",
+                string.Join(" ", traversal.BreadthFirstResult)
             );
-            this.PrintRow("In Order",
-                String.Join(" ", traversal.InOrderResult)
+            PrintRow("In Order",
+                string.Join(" ", traversal.InOrderResult)
             );
-            this.PrintRow("Post Order",
-                String.Join(" ", traversal.PostOrderResult)
+            PrintRow("Post Order",
+                string.Join(" ", traversal.PostOrderResult)
             );
-            this.PrintRow("Pre Order",
-                String.Join(" ", traversal.PreOrderResult)
+            PrintRow("Pre Order",
+                string.Join(" ", traversal.PreOrderResult)
             );
         }
 

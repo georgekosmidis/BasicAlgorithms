@@ -1,14 +1,11 @@
 ﻿using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Arrays.SearchAlgorithms
 {
     public class InterpolationSearch : ISearch
     {
-
         /// <summary>
         /// Interpolation Search  [Time: O(log(log(n))), Space: O(1)]
         /// </summary>

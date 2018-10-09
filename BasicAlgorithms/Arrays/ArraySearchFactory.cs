@@ -1,8 +1,7 @@
-﻿using BasicAlgorithms.Arrays.SearchAlgorithms;
+﻿using BasicAlgorithms.Array.DataProviders.Models;
+using BasicAlgorithms.Arrays.SearchAlgorithms;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
 using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
-using BasicAlgorithms.Array.DataProviders;
-using BasicAlgorithms.Array.DataProviders.Models;
 using System;
 
 namespace BasicAlgorithms.Arrays

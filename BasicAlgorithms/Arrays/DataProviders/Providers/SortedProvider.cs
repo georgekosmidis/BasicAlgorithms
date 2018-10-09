@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BasicAlgorithms.Array.DataProviders.Providers
 {
@@ -28,7 +27,7 @@ namespace BasicAlgorithms.Array.DataProviders.Providers
                 if (i < size / 2)
                     Data.Add(i);
                 else
-                    Data.Add(Int32.MaxValue - i);
+                    Data.Add(int.MaxValue - i);
             }
 
             MinValue = Data[0];
