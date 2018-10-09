@@ -1,8 +1,6 @@
 ﻿using BasicAlgorithms.Practice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Tests.Practice
 {
@@ -25,7 +23,7 @@ namespace BasicAlgorithms.Tests.Practice
 
             result = problems.LongestPalindrom("eabcb");
             Assert.AreEqual("bcb", result);
-            
+
         }
 
 
