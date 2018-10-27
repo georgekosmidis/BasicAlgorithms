@@ -56,3 +56,4 @@ Various Problems
 5. Problem described at https://practice.geeksforgeeks.org/problems/maximum-tip-calculator/0
 6. Problem described at https://practice.geeksforgeeks.org/problems/check-if-array-contains-contiguous-integers-with-duplicates-allowed/0
 7. Problem described at https://practice.geeksforgeeks.org/problems/pairs-with-positive-negative-values/0
+8. Various other known problems
