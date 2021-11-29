@@ -1,9 +1,8 @@
-﻿namespace BasicAlgorithms.Trees.TreeAlgorithms.Models
+﻿namespace BasicAlgorithms.Trees.TreeAlgorithms.Models;
+
+public class BinaryTree
 {
-    public class BinaryTree
-    {
-        public int Data { get; set; }
-        public BinaryTree LeftNode { get; set; }
-        public BinaryTree RightNode { get; set; }
-    }
+    public int Data { get; set; }
+    public BinaryTree LeftNode { get; set; }
+    public BinaryTree RightNode { get; set; }
 }

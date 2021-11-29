@@ -1,6 +1,6 @@
+using BasicAlgorithms.Arrays.SortingAlgorithms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using BasicAlgorithmsArrays.SortingAlgorithms;
 
 namespace BasicAlgorithms.Tests.Arrays.SortingAlgorithms
 {
@@ -21,6 +21,6 @@ namespace BasicAlgorithms.Tests.Arrays.SortingAlgorithms
             Assert.AreEqual(5, result.SortedData[4]);
         }
 
-       
+
     }
 }

@@ -1,5 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BasicAlgorithms.Arrays.SearchAlgorithms;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
 namespace BasicAlgorithms.Tests.Arrays.SearchAlgorithms

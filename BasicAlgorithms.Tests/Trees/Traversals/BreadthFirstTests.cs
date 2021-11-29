@@ -1,11 +1,7 @@
-﻿using BasicAlgorithms.Trees;
-using BasicAlgorithms.Trees.TreeAlgorithms;
-using BasicAlgorithms.Trees.TreeAlgorithms.Traversals;
+﻿using BasicAlgorithms.Trees.TreeAlgorithms.Traversals;
 using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BasicAlgorithms.Tests.Trees.Traversals
 {
@@ -13,7 +9,7 @@ namespace BasicAlgorithms.Tests.Trees.Traversals
     public class BreadthFirstTests
     {
 
-       
+
         [TestMethod]
         public void BreadthFirst_Traversal()
         {

@@ -1,10 +1,9 @@
 ﻿using BasicAlgorithms.Arrays.SearchAlgorithms.Models;
 using System.Collections.Generic;
 
-namespace BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces
+namespace BasicAlgorithms.Arrays.SearchAlgorithms.Interfaces;
+
+public interface ISearch
 {
-    public interface ISearch
-    {
-        SearchResult Find(List<int> data, int value);
-    }
+    SearchResult Find(List<int> data, int value);
 }

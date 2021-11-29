@@ -1,32 +1,26 @@
-﻿using BasicAlgorithms.Array.DataProviders.Interfaces;
-using BasicAlgorithms.Array.DataProviders.Models;
-using BasicAlgorithms.Array.DataProviders.Providers;
+﻿using BasicAlgorithms.Arrays.DataProviders.Interfaces;
+using BasicAlgorithms.Arrays.DataProviders.Models;
+using BasicAlgorithms.Arrays.DataProviders.Providers;
 using System;
 
-namespace BasicAlgorithms.Arrays
-{
-    public class DataProvidersFactory
-    {
-        public int SampleSize { get; }
-        public DataProvidersFactory(int sampleSize)
-        {
-            SampleSize = sampleSize;
-        }
-        public IArrayDataProvider GetProvider(eArrayDataProviders arrayDataProvider)
-        {
-            switch (arrayDataProvider)
-            {
-                case eArrayDataProviders.SortedAndUniform:
-                    return new SortedAndUniformProvider(SampleSize);
-                case eArrayDataProviders.Sorted:
-                    return new SortedProvider(SampleSize);
-                case eArrayDataProviders.Unsorted:
-                    return new UnsortedProvider(SampleSize);
-                case eArrayDataProviders.ReverseSorted:
-                    return new SortedAndUniformProvider(SampleSize);
-            }
+namespace BasicAlgorithms.Arrays;
 
-            throw new NotImplementedException("Unknown data provider '" + nameof(arrayDataProvider) + "'");
-        }
+public class DataProvidersFactory
+{
+    public int SampleSize { get; }
+    public DataProvidersFactory(int sampleSize)
+    {
+        SampleSize = sampleSize;
+    }
+    public IArrayDataProvider GetProvider(EnumArrayDataProviders arrayDataProvider)
+    {
+        return arrayDataProvider switch
+        {
+            EnumArrayDataProviders.SortedAndUniform => new SortedAndUniformProvider(SampleSize),
+            EnumArrayDataProviders.Sorted => new SortedProvider(SampleSize),
+            EnumArrayDataProviders.Unsorted => new UnsortedProvider(SampleSize),
+            EnumArrayDataProviders.ReverseSorted => new SortedAndUniformProvider(SampleSize),
+            _ => throw new NotImplementedException("Unknown data provider '" + nameof(arrayDataProvider) + "'"),
+        };
     }
 }

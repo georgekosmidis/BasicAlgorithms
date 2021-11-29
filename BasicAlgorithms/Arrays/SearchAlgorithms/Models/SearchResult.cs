@@ -1,8 +1,7 @@
-﻿namespace BasicAlgorithms.Arrays.SearchAlgorithms.Models
+﻿namespace BasicAlgorithms.Arrays.SearchAlgorithms.Models;
+
+public class SearchResult
 {
-    public class SearchResult
-    {
-        public int? PositionFound { get; set; }
-        public long Ticks { get; set; }
-    }
+    public int? PositionFound { get; set; }
+    public long Ticks { get; set; }
 }

@@ -4,27 +4,23 @@ using BasicAlgorithms.Trees.DataProviders.Providers;
 using BasicAlgorithms.Trees.TreeAlgorithms.TypedTrees;
 using System;
 
-namespace BasicAlgorithms.Trees
+namespace BasicAlgorithms.Trees;
+
+public class DataProvidersFactory
 {
-    public class DataProvidersFactory
+    public int SampleSize { get; }
+    public DataProvidersFactory(int sampleSize)
     {
-        public int SampleSize { get; }
-        public DataProvidersFactory(int sampleSize)
-        {
-            SampleSize = sampleSize;
-        }
+        SampleSize = sampleSize;
+    }
 
-        public ITreeDataProvider GetProvider(eTreeDataProvider treeDataProvider)
+    public ITreeDataProvider GetProvider(EnumTreeDataProvider treeDataProvider)
+    {
+        return treeDataProvider switch
         {
-            switch (treeDataProvider)
-            {
-                case eTreeDataProvider.Heap:
-                    return new TreeDataProvider(new HeapTree(), SampleSize);
-                case eTreeDataProvider.BST:
-                    return new TreeDataProvider(new BinarySearchTree(), SampleSize);
-            }
-
-            throw new NotImplementedException("Unknown data provider '" + nameof(treeDataProvider) + "'");
-        }
+            EnumTreeDataProvider.Heap => new TreeDataProvider(new HeapTree(), SampleSize),
+            EnumTreeDataProvider.BST => new TreeDataProvider(new BinarySearchTree(), SampleSize),
+            _ => throw new NotImplementedException("Unknown data provider '" + nameof(treeDataProvider) + "'"),
+        };
     }
 }

@@ -1,43 +1,44 @@
-﻿using BasicAlgorithmsArrays.SortingAlgorithms.Interfaces;
-using BasicAlgorithmsArrays.SortingAlgorithms.Models;
+﻿using BasicAlgorithms.Arrays.SortingAlgorithms.Interfaces;
+using BasicAlgorithms.Arrays.SortingAlgorithms.Models;
 using System.Collections.Generic;
 
-namespace BasicAlgorithmsArrays.SortingAlgorithms
+namespace BasicAlgorithms.Arrays.SortingAlgorithms;
+
+public class SelectionSort : ISort
 {
-    public class SelectionSort : ISort
+
+    /// <summary>
+    /// Selection Sort Algorithm [Time: O(n^2), Space: O(1)]
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    public SortResults Sort(List<int> data)
     {
+        var results = new SortResults();
+        var watch = System.Diagnostics.Stopwatch.StartNew();
 
-        /// <summary>
-        /// Selection Sort Algorithm [Time: O(n^2), Space: O(1)]
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public SortResults Sort(List<int> data)
+        for (var i = 0; i < data.Count - 1; i++)
         {
-            var results = new SortResults();
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-
-            for (var i = 0; i < data.Count - 1; i++)
+            var max = i;
+            for (var j = i + 1; j < data.Count; j++)
             {
-                var max = i;
-                for (var j = i + 1; j < data.Count; j++)
+                if (data[j] < data[max])
                 {
-                    if (data[j] < data[max])
-                        max = j;
-                }
-                if (max != i)
-                {
-                    var tmp = data[max];
-                    data[max] = data[i];
-                    data[i] = tmp;
+                    max = j;
                 }
             }
-
-            watch.Stop();
-            results.Ticks = watch.ElapsedTicks;
-
-            results.SortedData = data;
-            return results;
+            if (max != i)
+            {
+                var tmp = data[max];
+                data[max] = data[i];
+                data[i] = tmp;
+            }
         }
+
+        watch.Stop();
+        results.Ticks = watch.ElapsedTicks;
+
+        results.SortedData = data;
+        return results;
     }
 }

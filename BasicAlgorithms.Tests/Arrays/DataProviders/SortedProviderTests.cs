@@ -1,9 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BasicAlgorithms.Array.DataProviders;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using BasicAlgorithms.Array.DataProviders.Providers;
+﻿using BasicAlgorithms.Arrays.DataProviders.Providers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BasicAlgorithms.Tests.Arrays.DataProviders
 {

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace BasicAlgorithmsArrays.SortingAlgorithms.Models
+namespace BasicAlgorithms.Arrays.SortingAlgorithms.Models;
+
+public class SortResults
 {
-    public class SortResults
-    {
-        public List<int> SortedData { get; set; }
-        public long Ticks { get; set; }
-    }
+    public List<int> SortedData { get; set; }
+    public long Ticks { get; set; }
 }

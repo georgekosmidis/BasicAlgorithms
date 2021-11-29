@@ -3,93 +3,106 @@ using BasicAlgorithms.Trees;
 using BasicAlgorithms.UI;
 using System;
 
-namespace BasicAlgorithms
+namespace BasicAlgorithms;
+
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
+    Home:
+        ConsoleKeyInfo keyInfo;
+        do
         {
-            Home:
-            ConsoleKeyInfo keyInfo;
-            do
-            {
-                keyInfo = Home();
-            } while (keyInfo.KeyChar != '1' && keyInfo.KeyChar != '2' && keyInfo.KeyChar != '3' && keyInfo.KeyChar != '4');
+            keyInfo = Home();
+        } while (keyInfo.KeyChar is not '1' and not '2' and not '3' and not '4');
 
-            if (keyInfo.KeyChar == '1')
-                SortScreen();
-            if (keyInfo.KeyChar == '2')
-                SearchScreen();
-            if (keyInfo.KeyChar == '3')
-                TreeScreen();
-            if (keyInfo.KeyChar == '4')
-                TraversalScreen();
-            goto Home;
-        }
-        static ConsoleKeyInfo Home()
+        if (keyInfo.KeyChar == '1')
         {
-            Console.Clear();
-            Console.WriteLine("Hello! Please choose:");
-            Console.WriteLine("1: Sort Algorithms");
-            Console.WriteLine("2: Search Algorithms");
-            Console.WriteLine("3: Tree Algorithms");
-            Console.WriteLine("4: Traversal Algorithms");
-            return Console.ReadKey(true);
-        }
-        static ConsoleKeyInfo TraversalScreen()
-        {
-            Console.Clear();
-            new TraversalUI(
-                new TraversalFactory(6),
-                90
-            ).Print();
-
-            Console.WriteLine();
-            Console.WriteLine("Press any key for home screen!");
-
-            return Console.ReadKey(true);
+            SortScreen();
         }
 
-        static ConsoleKeyInfo TreeScreen()
+        if (keyInfo.KeyChar == '2')
         {
-            Console.Clear();
-            new TreeUI(
-                new TreeFactory(1000000),
-                90
-            ).Print();
-
-            Console.WriteLine();
-            Console.WriteLine("Press any key for home screen!");
-
-            return Console.ReadKey(true);
+            SearchScreen();
         }
 
-        static ConsoleKeyInfo SortScreen()
+        if (keyInfo.KeyChar == '3')
         {
-            Console.Clear();
-            new ArraySortUI(
-                new ArraySortFactory(10000),
-                90
-            ).Print();
-
-            Console.WriteLine();
-            Console.WriteLine("Press any key for home screen!");
-
-            return Console.ReadKey(true);
+            TreeScreen();
         }
 
-        static ConsoleKeyInfo SearchScreen()
+        if (keyInfo.KeyChar == '4')
         {
-            Console.Clear();
-            new ArraySearchUI(
-                new ArraySearchFactory(1000000),
-                90
-            ).Print();
-
-            Console.WriteLine();
-            Console.WriteLine("Press any key for home screen!");
-
-            return Console.ReadKey(true);
+            TraversalScreen();
         }
+
+        goto Home;
+    }
+
+    private static ConsoleKeyInfo Home()
+    {
+        Console.Clear();
+        Console.WriteLine("Hello! Please choose:");
+        Console.WriteLine("1: Sort Algorithms");
+        Console.WriteLine("2: Search Algorithms");
+        Console.WriteLine("3: Tree Algorithms");
+        Console.WriteLine("4: Traversal Algorithms");
+        return Console.ReadKey(true);
+    }
+
+    private static ConsoleKeyInfo TraversalScreen()
+    {
+        Console.Clear();
+        new TraversalUI(
+            new TraversalFactory(6),
+            90
+        ).Print();
+
+        Console.WriteLine();
+        Console.WriteLine("Press any key for home screen!");
+
+        return Console.ReadKey(true);
+    }
+
+    private static ConsoleKeyInfo TreeScreen()
+    {
+        Console.Clear();
+        new TreeUI(
+            new TreeFactory(1000000),
+            90
+        ).Print();
+
+        Console.WriteLine();
+        Console.WriteLine("Press any key for home screen!");
+
+        return Console.ReadKey(true);
+    }
+
+    private static ConsoleKeyInfo SortScreen()
+    {
+        Console.Clear();
+        new ArraySortUI(
+            new ArraySortFactory(10000),
+            90
+        ).Print();
+
+        Console.WriteLine();
+        Console.WriteLine("Press any key for home screen!");
+
+        return Console.ReadKey(true);
+    }
+
+    private static ConsoleKeyInfo SearchScreen()
+    {
+        Console.Clear();
+        new ArraySearchUI(
+            new ArraySearchFactory(1000000),
+            90
+        ).Print();
+
+        Console.WriteLine();
+        Console.WriteLine("Press any key for home screen!");
+
+        return Console.ReadKey(true);
     }
 }
