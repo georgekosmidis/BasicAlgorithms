@@ -1,3 +1,5 @@
+[![.NET](https://github.com/georgekosmidis/BasicAlgorithms/actions/workflows/restore-build-test.yml/badge.svg)](https://github.com/georgekosmidis/BasicAlgorithms/actions/workflows/restore-build-test.yml)
+
 Basic Algorithms Comparison in C#
 =================================
 Tests and compares the time the following algorithms need to perform their intended job
